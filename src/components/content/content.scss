@@ -1,0 +1,36 @@
+.content {
+	padding: vw(60) 0 vw(40);
+	background: $white;
+	&_big {
+		padding: vw(150) 0;
+	}
+	&__title {
+		font-size: vw(48);
+		line-height: vw(60);
+		letter-spacing: 0.02em;
+		margin-bottom: vw(30);
+	}
+	&__text {
+		margin: 0;
+		font-family: "PorscheNextTT";
+		font-size: vw(17);
+		line-height: vw(30);
+		letter-spacing: 0.02em;
+	}
+	@media (max-width: $phones) {
+		padding: vw(50, 320) 0 vw(80, 320);
+		&__title {
+			font-size: vw(22, 320);
+			line-height: vw(27, 320);
+			letter-spacing: 0.02em;
+			margin-bottom: vw(25, 320);
+		}
+		&__text {
+			margin: 0;
+			font-family: "PorscheNextTT";
+			font-size: vw(14, 320);
+			line-height: vw(24, 320);
+			letter-spacing: 0.02em;
+		}
+	}
+}

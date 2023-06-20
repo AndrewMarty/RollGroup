@@ -1,0 +1,464 @@
+.solutions {
+	overflow: hidden;
+	padding: vw(110) 0 vw(105);
+	background: $white;
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: vw(40);
+	}
+	&__title {
+		max-width: vw(840);
+	}
+	&__text {
+		margin: 0;
+		max-width: vw(488);
+		font-family: "PorscheNextTT";
+		font-size: vw(24);
+		line-height: vw(34);
+		letter-spacing: 0.02em;
+	}
+	&__list {
+		padding: 0;
+		display: flex;
+		list-style: none;
+		margin: 0;
+		margin-bottom: vw(45);
+	}
+	&__item {
+		cursor: pointer;
+		position: relative;
+		font-weight: 450;
+		font-size: vw(24);
+		letter-spacing: 0.03em;
+		margin-right: vw(110);
+		color: #cbd5d8;
+		transition: $normal;
+		&::before {
+			content: "";
+			opacity: 0;
+			width: 100%;
+			height: 2px;
+			opacity: 0;
+			position: absolute;
+			bottom: vw(-3);
+			display: block;
+			background: $main;
+		}
+		&:hover {
+			color: $main;
+			&::before {
+				opacity: 1;
+			}
+			&::after {
+				border-color: $main;
+			}
+		}
+		&::after {
+			content: "";
+			transition: $normal;
+			position: absolute;
+			width: vw(9);
+			height: vw(9);
+			border: vw(1) solid #cbd5d8;
+			border-left: none;
+			border-top: none;
+			top: 50%;
+			right: vw(-30);
+			transform: translateY(-80%) rotate(45deg);
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&_active {
+			font-weight: 700;
+			color: $main;
+			&::before {
+				opacity: 1;
+			}
+			&::after {
+				border-color: $main;
+				transform: translateY(-20%) rotate(-135deg);
+			}
+		}
+	}
+	&__btn {
+		img {
+			width: vw(15);
+			height: vw(15);
+		}
+	}
+	&__swiper {
+		width: vw(1750);
+		overflow: hidden;
+		margin-bottom: vw(45);
+	}
+	&__wrapper {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		overflow: visible;
+	}
+	&__card {
+		padding: vw(50) vw(54);
+		position: relative;
+		transition: $normal;
+		&::before {
+			content: "";
+			transition: $normal;
+			position: absolute;
+			display: block;
+			width: 40%;
+			height: 40%;
+			opacity: 0;
+			visibility: hidden;
+			background-color: $lgreen;
+			z-index: 0;
+			bottom: vw(50);
+			right: vw(54);
+		}
+		&:hover {
+			.solutions__text-inner {
+				position: relative;
+				color: $white;
+				opacity: 1;
+				visibility: visible;
+				z-index: 100;
+			}
+			&::before {
+				opacity: 1;
+				visibility: visible;
+				width: 100%;
+				height: 100%;
+				bottom: 0;
+				right: 0;
+			}
+		}
+		background: $main;
+		width: vw(480);
+		height: vw(480);
+		counter-increment: num;
+		&-img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -1;
+		}
+		&::after {
+			font-weight: 700;
+			font-size: vw(18);
+			line-height: vw(29);
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			content: counter(num);
+			position: absolute;
+			left: vw(54);
+			bottom: vw(65);
+			color: $white;
+		}
+		&:nth-child(-n + 9)::after {
+			font-family: "PorscheNextTT";
+			content: "0" counter(num);
+		}
+	}
+	&__name {
+		margin: 0;
+		margin-bottom: vw(20);
+		font-weight: 700;
+		font-size: vw(25);
+		line-height: vw(40);
+		color: $white;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+	}
+	&__btn {
+		position: absolute;
+		cursor: pointer;
+		width: vw(65);
+		height: vw(65);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: $lgreen;
+		border: none;
+		bottom: vw(50);
+		right: vw(54);
+	}
+	&__controls {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__buttons {
+		display: flex;
+	}
+	&__button {
+		cursor: pointer;
+		background: $lwhite;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		width: vw(65);
+		height: vw(65);
+		margin-right: vw(2);
+		transition: $normal;
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			background: $lgreen;
+		}
+	}
+	&__dots {
+		left: auto !important;
+		right: 0 !important;
+		width: auto !important;
+		position: absolute;
+		z-index: 100;
+		.swiper-pagination-bullet {
+			opacity: 1 !important;
+			background: $lwhite !important;
+			cursor: pointer;
+		}
+		.swiper-pagination-bullet-active {
+			background-color: $lgreen !important;
+		}
+	}
+	&__button {
+		img {
+			width: vw(15);
+			height: vw(15);
+		}
+	}
+	&__text-inner {
+		transition: $normal;
+		opacity: 0;
+		margin: 0;
+		max-width: vw(488);
+		font-family: "PorscheNextTT";
+		font-size: vw(24);
+		line-height: vw(34);
+		letter-spacing: 0.02em;
+	}
+	&__mobile {
+		display: none;
+	}
+	// @media (max-width: $large) {
+	// 	&__title {
+	// 		font-size: 40);
+	// 		line-height: 50);
+	// 	}
+	// 	&__text {
+	// 		font-size: 20);
+	// 		line-height: 25);
+	// 	}
+	// 	&__item {
+	// 		margin-right: 60);
+	// 		font-size: 20);
+	// 	}
+	// 	&__name {
+	// 		font-size: 16);
+	// 		line-height: 25);
+	// 	}
+	//
+	// 	&__swiper {
+	// 		margin-bottom: 30);
+	// 	}
+	// 	&__btn {
+	// 		width: 55);
+	// 		height: 55);
+	// 		bottom: 35);
+	// 		right: 35);
+	// 	}
+	// }
+	// @media (max-width: $medium) {
+	// 	padding: 90) 0 85);
+	// 	&__title {
+	// 		font-size: 28);
+	// 		line-height: 34);
+	// 	}
+	// 	&__text {
+	// 		font-size: 18);
+	// 		line-height: 20);
+	// 	}
+	// 	&__item {
+	// 		margin-right: 45);
+	// 		font-size: 17);
+	// 	}
+	// 	&__card {
+	// 		padding: 35);
+	// 		width: 350);
+	// 		height: 350);
+	// 		&::after {
+	// 			left: 30);
+	// 			font-size: 16);
+	// 			bottom: 45);
+	// 		}
+	// 	}
+	// 	&__name {
+	// 		font-size: 13);
+	// 		line-height: 20);
+	// 	}
+	// 	&__btn {
+	// 		width: 45);
+	// 		height: 45);
+	// 		bottom: 35);
+	// 		right: 35);
+	// 		img {
+	// 			width: 10);
+	// 			height: 10);
+	// 		}
+	// 	}
+	// 	&__button {
+	// 		width: 45);
+	// 		height: 45);
+	// 	}
+	// }
+	// @media (max-width: $tablets) {
+	//
+	//
+	// 	&__text {
+	// 		max-width: 460);
+	// 	}
+	// 	&__item {
+	// 		font-size: 14);
+	// 	}
+	// 	&__name {
+	// 		font-size: 16);
+	// 		line-height: 25);
+	// 	}
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	// }
+	@media (max-width: $phones) {
+		&__row {
+			flex-wrap: wrap;
+		}
+		&__card {
+			padding: vw(35, 320);
+			width: vw(400, 320);
+			height: vw(400, 320);
+			&::after {
+				left: vw(30, 320);
+				font-size: vw(16, 320);
+				bottom: vw(45, 320);
+			}
+		}
+		&__mobile-text {
+			font-weight: 450;
+			font-size: vw(10, 320);
+			line-height: vw(13, 320);
+			letter-spacing: 0.05em;
+		}
+		&__card {
+			padding: vw(30, 320) vw(24, 320);
+			width: vw(320, 320);
+			height: vw(280, 320);
+			&::after {
+				left: vw(25, 320);
+				bottom: vw(25, 320);
+			}
+		}
+		&__btn {
+			img {
+				width: vw(15, 320);
+				height: vw(15, 320);
+			}
+		}
+		&__buttons {
+			display: none;
+		}
+		&__text {
+			max-width: none;
+		}
+		&__title {
+			width: 100%;
+			max-width: none;
+			margin-bottom: vw(30, 320);
+		}
+		&__btn {
+			width: vw(65, 320);
+			height: vw(65, 320);
+			right: 0;
+			bottom: 0;
+		}
+		&__img {
+			margin-right: vw(8, 320);
+		}
+		&__mobile {
+			display: flex;
+			align-items: center;
+			margin-bottom: vw(15, 320);
+		}
+		&__dots {
+			right: auto !important;
+			left: 0 !important;
+			bottom: vw(-10, 320) !important;
+		}
+		&__swiper {
+			position: relative;
+			left: vw(-22, 320);
+			overflow: visible;
+			width: 100vw;
+		}
+		padding: vw(23, 320) 0 vw(20, 320);
+		&__title {
+			font-size: vw(22, 320);
+			line-height: vw(27, 320);
+			margin-bottom: vw(10, 320);
+		}
+		&__item {
+			font-size: vw(10, 320);
+			line-height: vw(17, 320);
+			margin-right: vw(20, 320);
+			&::after {
+				width: 1.5625vw;
+				height: 1.5625vw;
+				border: 0.3125vw solid #cbd5d8;
+				right: vw(-13, 320);
+				border-left: none;
+				border-top: none;
+			}
+			&_active {
+				&::after {
+					border-color: $main;
+				}
+			}
+		}
+		&__text,
+		&__text-inner {
+			display: block;
+			font-size: vw(14, 320);
+			line-height: vw(20, 320);
+			margin-bottom: 0;
+			opacity: 1;
+			max-width: none;
+		}
+		&__text-inner {
+			opacity: 0;
+		}
+		&__list {
+			margin-bottom: vw(10, 320);
+		}
+		&__row {
+			margin-bottom: vw(15, 320);
+		}
+		&__name {
+			font-size: vw(16, 320);
+			line-height: vw(25, 320);
+		}
+		&__dots {
+			bottom: vw(-15, 320) !important;
+		}
+	}
+}

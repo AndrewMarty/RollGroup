@@ -1,0 +1,566 @@
+.help {
+	color: $white;
+	overflow: hidden;
+	background: $lwhite;
+	&__inner {
+		padding: vw(90) 0;
+		position: relative;
+	}
+	&__back {
+		width: 100vw;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 0;
+	}
+	&__item {
+		position: relative;
+		max-width: vw(750);
+		z-index: 10;
+	}
+	&__cost-img {
+		width: vw(40);
+		height: vw(40);
+	}
+	&__social-whatsapp {
+		img {
+			width: vw(34);
+			height: vw(34);
+		}
+	}
+	&__social-telegram {
+		img {
+			width: vw(31);
+			height: vw(25);
+		}
+	}
+	&__social-viber {
+		img {
+			width: vw(31);
+			height: vw(34);
+		}
+	}
+	&__suptitle {
+		max-width: vw(550);
+		display: block;
+		font-family: "PorscheNextTT";
+		font-size: vw(40);
+		line-height: vw(50);
+		letter-spacing: 0.02em;
+		margin-bottom: vw(30);
+	}
+	&__title {
+		min-height: vw(375);
+		margin-bottom: vw(30);
+	}
+	&__online {
+		font-family: "PorscheNextTT";
+		display: block;
+		font-size: vw(30);
+		line-height: vw(50);
+		margin-bottom: vw(7);
+		letter-spacing: 0.02em;
+	}
+	&__person {
+		height: 100%;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+	&__person-img {
+		height: 100%;
+		display: block;
+	}
+	&__cost,
+	&__person-info {
+		position: absolute;
+	}
+	&__socials {
+		display: flex;
+		margin-bottom: vw(39);
+	}
+	&__social {
+		margin-right: vw(39);
+		background: $white;
+		color: $white;
+		text-decoration: none;
+		min-width: vw(100);
+		min-height: vw(100);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			transition: $normal;
+		}
+		&:hover {
+			img {
+				transform: scale(1.2);
+			}
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&-whatsapp {
+			padding: 0 vw(55) 0 vw(33);
+			color: $main;
+			img {
+				margin-right: vw(25);
+			}
+		}
+		&-telegram {
+			background: $telegram;
+		}
+		&-viber {
+			background: $viber;
+		}
+	}
+	&__social-text {
+		margin: 0;
+		text-decoration: none;
+		font-weight: 450;
+		font-size: vw(16);
+		margin: 0 auto;
+		line-height: 170%;
+		/* or 27) */
+		text-align: center;
+		letter-spacing: 0.02em;
+		max-width: vw(125);
+	}
+	&__info-link {
+		img {
+			width: vw(15);
+			height: vw(15);
+		}
+	}
+	&__social-light {
+		font-size: 9px;
+		font-family: "PorscheNextTT";
+		color: #cecece;
+	}
+	&__cost {
+		top: vw(314);
+		right: vw(139);
+		max-width: vw(205);
+	}
+	&__cost-img {
+		margin-bottom: vw(12);
+	}
+	&__cost-text {
+		margin: 0;
+		font-family: "PorscheNextTT";
+		font-size: vw(24);
+		line-height: vw(33);
+	}
+	&__person-info {
+		font-weight: 450;
+		font-size: vw(20);
+		line-height: vw(21);
+		/* or 105% */
+
+		text-align: right;
+		letter-spacing: 0.02em;
+		bottom: vw(106);
+		right: vw(261);
+		max-width: vw(200);
+	}
+	&__person-name {
+		display: block;
+	}
+	&__person-rang {
+		font-family: "PorscheNextTT";
+		font-size: vw(12);
+	}
+	&__info {
+		display: flex;
+		align-items: flex-start;
+	}
+	&__info-item {
+		font-family: "PorscheNextTT";
+		margin-right: vw(15);
+		font-weight: 400;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__info-or {
+		display: block;
+		font-size: vw(30);
+		display: flex;
+		align-items: center;
+		letter-spacing: 0.02em;
+		margin-bottom: vw(10);
+	}
+	&__info-time {
+		font-size: vw(16);
+		line-height: vw(10);
+		letter-spacing: 0.03em;
+	}
+	&__info-number {
+		text-decoration: none;
+		color: $white;
+		display: block;
+		font-weight: 700;
+		font-size: vw(33);
+		letter-spacing: 0.03em;
+		margin-bottom: vw(5);
+		transition: $normal;
+		&:hover {
+			color: $lgreen;
+		}
+	}
+	&__info-link {
+		font-family: "AvenirNextCyr";
+		font-weight: 700;
+		font-size: vw(20);
+		letter-spacing: 0.02em;
+		color: $lgreen;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		span {
+			text-decoration: none;
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: vw(0);
+				height: vw(2);
+				width: 100%;
+				left: 0;
+				background-color: $lgreen;
+				opacity: 0;
+				transition: $normal;
+			}
+		}
+		img {
+			transition: $normal;
+		}
+		&:hover {
+			span {
+				&::after {
+					opacity: 1;
+				}
+			}
+			img {
+				transform: rotate(45deg);
+			}
+		}
+	}
+	&__info-inner {
+		margin-right: vw(10);
+	}
+	@media (max-width: $phones) {
+		&__item {
+			max-width: vw(630, 320);
+		}
+		&__cost {
+			top: vw(255, 320);
+			right: vw(55, 320);
+		}
+		&__cost-text {
+			font-size: vw(20, 320);
+			line-height: vw(25, 320);
+		}
+		&__title {
+			font-size: vw(36, 320);
+			line-height: vw(46, 320);
+		}
+		&__suptitle {
+			font-size: vw(31, 320);
+		}
+		&__person-info {
+			bottom: vw(145, 320);
+			right: vw(176, 320);
+			font-size: vw(18, 320);
+		}
+		&__online {
+			font-size: vw(25, 320);
+		}
+		&__social {
+			min-width: vw(80, 320);
+			min-height: vw(80, 320);
+			margin-right: vw(25, 320);
+		}
+		&__socials {
+			margin-bottom: vw(20, 320);
+		}
+		&__social-text {
+			font-size: vw(13, 320);
+			line-height: 150%;
+		}
+		&__info-number {
+			font-size: vw(26, 320);
+		}
+		&__info-or {
+			font-size: vw(26, 320);
+		}
+		&__info-time {
+			font-size: vw(14, 320);
+		}
+		&__info-link {
+			font-size: vw(16, 320);
+			img {
+				width: vw(15, 320);
+				height: vw(15, 320);
+			}
+		}
+		&__item {
+			max-width: vw(510, 320);
+		}
+		&__suptitle {
+			font-size: vw(23, 320);
+			line-height: vw(34, 320);
+			margin-bottom: vw(10, 320);
+		}
+		&__title {
+			font-size: vw(24, 320);
+			line-height: vw(30, 320);
+		}
+		&__info-number {
+			font-size: vw(20, 320);
+		}
+		&__social-whatsapp {
+			padding: 0 vw(30, 320);
+		}
+		&__cost {
+			right: vw(-8, 320);
+			top: vw(170, 320);
+		}
+		&__cost-img {
+			width: vw(30, 320);
+			height: vw(30, 320);
+			margin-bottom: vw(5, 320);
+		}
+		&__cost-text {
+			font-size: vw(17, 320);
+			line-height: vw(21, 320);
+		}
+		&__person-info {
+			bottom: vw(108, 320);
+			right: vw(115, 320);
+			font-size: vw(12, 320);
+		}
+		&__person-rang {
+			font-size: vw(10, 320);
+		}
+		&__socials {
+			margin-bottom: vw(18, 320);
+		}
+		&__info-or {
+			font-size: vw(20, 320);
+		}
+		&__info-link {
+			font-size: vw(11, 320);
+		}
+		&__social {
+			min-width: vw(70, 320);
+			min-height: vw(70, 320);
+			img {
+				width: vw(20, 320);
+				height: vw(20, 320);
+			}
+		}
+		&__online {
+			font-size: vw(17, 320);
+		}
+		&__social {
+			min-width: vw(45, 320);
+			min-height: vw(45, 320);
+			img {
+				width: vw(14, 320);
+				height: vw(14, 320);
+			}
+		}
+		&__social-whatsapp {
+			img {
+				width: vw(22, 320);
+				height: vw(22, 320);
+				margin-right: vw(7, 320);
+			}
+		}
+		&__item {
+			max-width: vw(400, 320);
+		}
+		&__social-box {
+			text-align: center;
+		}
+		&__social-text {
+			font-size: vw(8, 320);
+		}
+		&__suptitle {
+			font-size: vw(17, 320);
+			line-height: vw(27, 320);
+		}
+		&__online {
+			line-height: vw(20, 320);
+			font-size: vw(15, 320);
+			margin-bottom: vw(10, 320);
+		}
+		&__title {
+			font-size: vw(20, 320);
+			line-height: vw(25, 320);
+			margin-bottom: vw(15, 320);
+		}
+		&__social {
+			margin-right: vw(15, 320);
+		}
+		&__social-light {
+			font-size: vw(10, 320);
+		}
+		&__inner {
+			padding: vw(45, 320) 0;
+		}
+		&__back {
+			right: vw(-22, 320);
+		}
+		&__person {
+			bottom: 0;
+			right: 0;
+			width: vw(600, 320);
+			height: auto;
+		}
+		&__person-rang,
+		&__peson-name,
+		&__person-info {
+			line-height: vw(21, 320);
+		}
+		&__cost {
+			top: vw(100, 320);
+			max-width: vw(180, 320);
+			right: vw(-60, 320);
+		}
+		&__info-link {
+			font-size: vw(8, 320);
+			img {
+				width: vw(8, 320);
+				height: vw(8, 320);
+			}
+		}
+		&__info-link {
+			img {
+				width: vw(12, 320);
+				height: vw(12, 320);
+			}
+		}
+		&__info-or {
+			font-size: vw(15, 320);
+		}
+		&__suptitle {
+			max-width: none;
+		}
+		&__info-number {
+			font-size: vw(16, 320);
+		}
+		&__person-info {
+			bottom: vw(68, 320);
+			right: vw(68, 320);
+		}
+		&__cost-text {
+			font-size: vw(14, 320);
+		}
+		&__person-img {
+			width: 100vw;
+			position: relative;
+		}
+		&__suptitle,
+		&__subtitle {
+			font-size: vw(14, 320);
+			line-height: vw(20, 320);
+		}
+		&__item {
+			margin-bottom: vw(120);
+		}
+		&__title {
+			font-size: vw(22, 320);
+			line-height: vw(27, 320);
+			margin-bottom: vw(10, 320);
+		}
+		&__social-whatsapp {
+			padding: 0 vw(8, 320);
+		}
+		&__social {
+			img {
+				width: vw(14, 320);
+				height: vw(11, 320);
+			}
+		}
+		&__inner {
+			padding: 0;
+			padding-top: vw(20, 320);
+		}
+		&__social-text {
+			max-width: none;
+		}
+		&__cost {
+			text-align: left;
+			top: vw(0, 320);
+			right: auto;
+			left: vw(60, 320);
+		}
+		&__person {
+			width: 100vw;
+			position: relative;
+			left: vw(-22, 320);
+			bottom: 0;
+		}
+		&__social-whatsapp {
+			padding-top: vw(5, 320);
+			padding-bottom: vw(5, 320);
+			img {
+				width: 22px;
+				height: 22px;
+			}
+		}
+		&__item {
+			margin-bottom: vw(119, 320);
+		}
+		&__info {
+			flex-wrap: wrap;
+			&-item {
+				display: flex;
+				flex-wrap: wrap;
+				width: 100%;
+			}
+			&-number {
+				font-size: vw(21, 320);
+				width: 100%;
+				margin-bottom: vw(5, 320);
+			}
+			&-inner {
+				font-size: vw(11, 320);
+				margin-right: vw(8, 320);
+			}
+			&-or {
+				margin-right: vw(3, 320);
+			}
+			&-time,
+			&-or {
+				font-size: vw(14, 320);
+				line-height: vw(14, 320);
+			}
+		}
+		&__cost {
+			max-width: none;
+			top: vw(-75, 320);
+			left: vw(22, 320);
+			&-text {
+				font-size: vw(14, 320);
+				line-height: vw(16, 320);
+			}
+		}
+		&__person-info {
+			text-align: right;
+			max-width: vw(125, 320);
+			right: vw(47, 320);
+			bottom: vw(53, 320);
+		}
+		&__person-name {
+			font-size: vw(20, 320);
+			margin-bottom: vw(15, 320);
+		}
+		&__person-rang {
+			font-size: vw(12, 320);
+		}
+	}
+}

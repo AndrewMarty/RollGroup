@@ -1,0 +1,36 @@
+// Colors
+$main: #1c1c1c;
+$white: #fff;
+$light: #f8f7f7;
+$lgreen: #38bc80;
+$lwhite: #f1f5f5;
+$quastion: #c8d8d8;
+$black: #000;
+$link: #6d6d6d;
+$dgreen: #0c5647;
+$telegram: #05a0eb;
+$viber: #746fbb;
+
+// Transitions
+$slow: 0.8s;
+$normal: 0.2s;
+$fast: 0.2s;
+
+// Breakpoints
+$large: 1200px;
+$medium: 990px;
+$tablets: 768px;
+$phones: 600px;
+$iphone: 320px;
+
+// Z-indexs
+$zindex-dropdown: 1000;
+$zindex-sticky: 1020;
+$zindex-fixed: 1030;
+$zindex-offcanvas-backdrop: 1040;
+$zindex-offcanvas: 1045;
+$zindex-modal-backdrop: 1050;
+$zindex-modal: 1055;
+$zindex-popover: 1070;
+$zindex-tooltip: 1080;
+$zindex-toast: 1090;

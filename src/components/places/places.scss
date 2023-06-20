@@ -1,0 +1,265 @@
+.places {
+	color: $white;
+	position: relative;
+	overflow: hidden;
+	&::after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		background: #1c1c1c;
+		left: 0;
+		top: 0;
+		display: block;
+		z-index: -1;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: vw(68);
+		line-height: vw(75);
+		letter-spacing: 0.02em;
+	}
+	&__subtitle {
+		display: block;
+		font-weight: 700;
+		font-size: vw(36);
+		line-height: vw(50);
+		color: $lgreen;
+		letter-spacing: 0.02em;
+		margin-bottom: vw(10);
+	}
+	&__row {
+		position: relative;
+		display: flex;
+	}
+	&__wrap {
+		position: relative;
+		z-index: 10;
+	}
+	&__item {
+		position: relative;
+		padding-top: vw(200);
+		flex-shrink: 0;
+		max-width: vw(430);
+		margin-right: vw(30);
+		&::after {
+			position: absolute;
+			bottom: vw(85);
+			display: block;
+			content: "";
+			right: vw(-30);
+			width: 100vw;
+			background: $lgreen;
+			height: 100%;
+		}
+	}
+	&__inner {
+		padding: vw(200) 0 vw(80);
+	}
+	&__top {
+		margin-bottom: vw(-100);
+	}
+	&__bottom {
+		background: center/cover url("../img/places/background.png");
+	}
+	&__item-right {
+		position: relative;
+	}
+	&__name {
+		font-weight: 700;
+		font-size: vw(48);
+		line-height: vw(75);
+		letter-spacing: 0.02em;
+	}
+	&__list {
+		margin: 0;
+		padding-left: vw(25);
+	}
+	&__text,
+	&__li {
+		margin: 0;
+		font-family: "PorscheNextTT";
+		font-style: normal;
+		font-weight: 400;
+		font-size: vw(17);
+		line-height: vw(30);
+		letter-spacing: 0.02em;
+	}
+	&__button {
+		cursor: pointer;
+		background: $white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: vw(65);
+		height: vw(65);
+		margin-right: vw(2);
+		transition: $normal;
+		border: none;
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			background: $lgreen;
+		}
+	}
+	&__icon {
+		margin-bottom: vw(25);
+	}
+	&__card {
+		position: relative;
+		&::after {
+			display: block;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			position: absolute;
+			content: "";
+			z-index: 0;
+			pointer-events: none;
+			background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0) 41.88%,
+				rgba(0, 0, 0, 0.5655) 100%
+			);
+		}
+	}
+	&__img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__icon {
+		width: vw(68);
+		height: vw(68);
+	}
+	&__button {
+		img {
+			width: vw(15);
+			height: vw(15);
+		}
+	}
+	&__info {
+		background: #0f0f0f;
+		padding: vw(10) vw(40);
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 1;
+		font-weight: 450;
+		font-size: vw(24);
+		line-height: vw(65);
+		color: $white;
+		letter-spacing: 0.02em;
+	}
+	&__dots {
+		right: auto !important;
+		left: 50% !important;
+		width: auto !important;
+		position: absolute;
+		transform: translateX(-50%);
+		bottom: vw(30) !important;
+		z-index: 100;
+		.swiper-pagination-bullet {
+			opacity: 1 !important;
+			width: vw(12);
+			height: vw(12);
+			background: $lwhite !important;
+			cursor: pointer;
+		}
+		.swiper-pagination-bullet-active {
+			background-color: $lgreen !important;
+		}
+	}
+	&__buttons {
+		display: flex;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+	&__slider {
+		overflow: hidden;
+		position: relative;
+		width: 67vw;
+	}
+	@media (max-width: $phones) {
+		&__row {
+			flex-wrap: wrap;
+		}
+		&__button {
+			margin-right: vw(1, 320);
+			img {
+				width: vw(10, 320);
+				height: vw(10, 320);
+			}
+			width: vw(46, 320);
+			height: vw(46, 320);
+		}
+		&__item {
+			padding: vw(40, 320) 0 vw(40, 320);
+			width: 100%;
+			margin-right: 0;
+			max-width: none;
+			&::after {
+				right: vw(-22, 320);
+				bottom: 0;
+			}
+		}
+		&__buttons {
+			bottom: vw(-70, 320);
+		}
+		&__item-right {
+			width: 100vw;
+			position: relative;
+			left: vw(-22, 320);
+		}
+		&__slider {
+			width: 100%;
+		}
+		&__inner {
+			padding: vw(115, 320) 0 vw(105, 320);
+		}
+		&__title {
+			max-width: vw(180, 320);
+			font-size: vw(22, 320);
+			line-height: vw(27, 320);
+		}
+		&__name {
+			font-size: vw(24, 320);
+			line-height: vw(35, 320);
+			margin-bottom: vw(23, 320);
+			font-weight: 500;
+		}
+		&__list {
+			padding-left: vw(20, 320);
+		}
+		&__text,
+		&__li {
+			font-size: vw(14, 320);
+			line-height: vw(22, 320);
+		}
+		&__dots {
+			.swiper-pagination-bullet {
+				opacity: 1 !important;
+				width: vw(5, 320);
+				height: vw(5, 320);
+				background: $lwhite !important;
+				cursor: pointer;
+			}
+			.swiper-pagination-bullet-active {
+				background-color: $lgreen !important;
+			}
+		}
+		&__icon {
+			width: vw(42, 320);
+			height: vw(42, 320);
+		}
+		&__info {
+			padding: vw(2, 320) vw(9, 320);
+			font-size: vw(11, 320);
+			line-height: vw(18, 320);
+		}
+	}
+}

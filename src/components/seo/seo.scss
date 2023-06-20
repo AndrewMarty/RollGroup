@@ -1,0 +1,68 @@
+.seo {
+	background: $lwhite;
+	padding: vw(60) 0 vw(80);
+	&__title {
+		margin-bottom: vw(20);
+	}
+	&__text {
+		margin: 0;
+		font-family: "PorscheNextTT";
+		font-size: vw(16);
+		line-height: vw(30);
+		letter-spacing: 0.02em;
+	}
+	&__more {
+		font-weight: 700;
+		font-size: vw(20);
+		letter-spacing: 0.02em;
+		color: $lgreen;
+		display: none;
+		align-items: center;
+		text-decoration: none;
+		img {
+			width: vw(15);
+			height: vw(15);
+		}
+		span {
+			text-decoration: none;
+		}
+		img {
+			transition: $normal;
+		}
+		& {
+			img {
+				transform: rotate(135deg);
+			}
+		}
+	}
+	@media (max-width: $phones) {
+		padding: vw(20, 320) 0;
+		&__title {
+			font-size: vw(22, 320);
+			line-height: vw(27, 320);
+		}
+		&__text {
+			font-size: vw(10, 320);
+			line-height: vw(15, 320);
+			max-height: 14.0625vw;
+			overflow: hidden;
+			margin-bottom: vw(15, 320);
+			&_active {
+				max-height: none;
+			}
+		}
+		&__more {
+			display: flex;
+			font-size: 3.4375vw;
+			img {
+				width: vw(11, 320);
+				height: vw(11, 320);
+			}
+			&_active {
+				img {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,301 @@
+.own {
+	background: $white;
+	overflow: hidden;
+	position: relative;
+	&__title {
+		font-weight: 450;
+		font-size: vw(60);
+		line-height: vw(75);
+		letter-spacing: 0.02em;
+		margin: 0;
+		margin-bottom: vw(34);
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+	&-gray {
+		background: #f7f7f7;
+	}
+	&__subtitle {
+		font-family: "PorscheNextTT";
+		font-size: vw(30);
+		line-height: vw(39);
+		margin: 0;
+		letter-spacing: 0.02em;
+		margin-bottom: vw(35);
+	}
+	&__green {
+		color: $lgreen;
+		font-weight: 700;
+	}
+	&__pattent {
+		cursor: pointer;
+		display: inline-block;
+		font-family: "PorscheNextTT";
+		padding: vw(2) vw(24);
+		border-radius: vw(30);
+		color: $white;
+		font-size: vw(16);
+		line-height: vw(39);
+		background: $black;
+		letter-spacing: 0.02em;
+		transition: $normal;
+		&:hover {
+			background-color: $lgreen;
+		}
+	}
+	&__check {
+		margin: 0;
+		position: relative;
+		font-weight: 450;
+		font-size: vw(30);
+		line-height: vw(40);
+		letter-spacing: 0.02em;
+	}
+	&__video {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: $normal;
+	}
+	&__player {
+		overflow: hidden;
+		width: vw(1175);
+		height: vw(800);
+		position: relative;
+		flex-grow: 1;
+		flex-shrink: 0;
+		cursor: pointer;
+		&:hover {
+			.own__video {
+				transform: scale(1.1);
+			}
+		}
+	}
+	&__bottom {
+		padding: vw(50) vw(50) vw(50) vw(73);
+		color: $white;
+		position: absolute;
+		display: flex;
+		justify-content: space-between;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background: $main;
+			opacity: 0.75;
+			display: block;
+			z-index: 0;
+		}
+		display: flex;
+		align-items: center;
+	}
+	&__line {
+		position: relative;
+		width: vw(316);
+		height: vw(1);
+		background: $white;
+		margin: 0 vw(50);
+	}
+	&__text {
+		max-width: vw(100);
+		font-size: vw(16);
+		line-height: vw(27);
+		margin: 0;
+		margin-right: vw(40);
+		text-align: right;
+		letter-spacing: 0.02em;
+	}
+	&__play {
+		width: vw(100);
+		height: vw(100);
+		animation: pulse 2s infinite;
+		border: none;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: $lgreen;
+		transition: $normal;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+	&__item {
+		flex-shrink: 0;
+		max-width: vw(575);
+		padding: vw(100) 0 vw(90);
+		position: relative;
+		&::after {
+			content: "";
+			display: block;
+			width: 100vw;
+			right: 0;
+			background-color: #f1f5f5;
+			height: vw(90);
+			bottom: vw(0);
+			position: absolute;
+		}
+	}
+	&__play {
+		img {
+			width: vw(15);
+			height: vw(15);
+		}
+	}
+	&__controls {
+		position: relative;
+		font-family: "PorscheNextTT";
+		display: flex;
+		align-items: center;
+	}
+	&__second {
+		&::after {
+			display: none;
+		}
+	}
+	// @media (max-width: $medium) {
+	// 	&__title {
+	// 		font-size: 30);
+	// 		line-height: 44);
+	// 		margin-bottom: 15);
+	// 	}
+	// 	&__item {
+	// 		padding: 30) 0 25);
+	// 		flex-shrink: 1;
+	// 		&::after {
+	// 			display: none;
+	// 		}
+	// 	}
+	// 	&__play {
+	// 		width: 75);
+	// 		height: 75);
+	// 	}
+	// 	&__text {
+	// 		margin-right: 10);
+	// 	}
+	// 	&__bottom {
+	// 		padding: 15) 20);
+	// 	}
+	// 	&__line {
+	// 		display: none;
+	// 	}
+	// 	&__text,
+	// 	&__check {
+	// 		max-width: 200);
+	// 		font-size: 15);
+	// 		line-height: 24);
+	// 	}
+	// 	&__player {
+	// 		position: relative;
+	// 		left: -15);
+	// 		width: 100vw;
+	// 	}
+	// 	&__video {
+	// 		width: 100%;
+	// 		object-fit: cover;
+	// 		height: 350);
+	// 	}
+	// 	&__row {
+	// 		flex-wrap: wrap;
+	// 		flex-direction: column;
+	// 	}
+	// 	&__subtitle {
+	// 		font-size: 19);
+	// 		line-height: 28);
+	// 		margin-bottom: 10);
+	// 	}
+	// 	&__pattent {
+	// 		padding: 6) 14);
+	// 		line-height: 16);
+	// 		font-size: 11);
+	// 	}
+	// }
+	@media (max-width: $phones) {
+		&__title {
+			font-size: vw(22, 320);
+			line-height: vw(27, 320);
+			margin-bottom: vw(10, 320);
+		}
+		&__item {
+			padding: vw(30, 320) 0 vw(25, 320);
+			flex-shrink: 1;
+			width: 100%;
+			max-width: none;
+			&::after {
+				display: none;
+			}
+		}
+		&__play {
+			width: vw(75, 320);
+			height: vw(75, 320);
+		}
+		&__text {
+			margin-right: vw(10, 320);
+		}
+		&__bottom {
+			padding: vw(15, 320) vw(20, 320);
+		}
+		&__play {
+			img {
+				width: vw(12, 320);
+				height: vw(12, 320);
+			}
+		}
+		&__line {
+			display: none;
+		}
+		&__text,
+		&__check {
+			max-width: vw(80, 320);
+			font-size: vw(10, 320);
+			line-height: vw(14, 320);
+		}
+		&__player {
+			position: relative;
+			left: vw(-22, 320);
+			width: 100vw;
+			height: vw(350, 320);
+		}
+		&__video {
+			width: 100%;
+			object-fit: cover;
+		}
+		&__row {
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
+		&__subtitle {
+			font-size: vw(14, 320);
+			line-height: vw(20, 320);
+			margin-bottom: vw(10, 320);
+		}
+		&__pattent {
+			padding: vw(6, 320) vw(14, 320);
+			line-height: vw(16, 320);
+			font-size: vw(9, 320);
+		}
+		&__bottom {
+			padding: 0;
+			padding-left: vw(22, 320);
+		}
+		&__pattent {
+			border-radius: vw(15, 320);
+		}
+		&__subtitle {
+			font-size: vw(13, 320);
+			max-width: none;
+		}
+		&__green {
+			color: $main;
+		}
+	}
+}

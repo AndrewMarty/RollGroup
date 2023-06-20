@@ -1,0 +1,214 @@
+.guarantee {
+	padding: vw(140) 0 vw(150);
+	overflow: hidden;
+	position: relative;
+	background: $lwhite;
+	&__back {
+		width: vw(1280);
+		height: vw(880);
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		z-index: 0;
+	}
+	&__item {
+		position: relative;
+		max-width: vw(720);
+	}
+	&__title {
+		margin-bottom: vw(40);
+		letter-spacing: 0.02em;
+	}
+	&__link {
+		img {
+			width: vw(15);
+			height: vw(15);
+		}
+	}
+	&__text {
+		font-family: "PorscheNextTT";
+		font-size: vw(30);
+		line-height: vw(39);
+		/* or 130% */
+		margin: 0;
+		letter-spacing: 0.02em;
+		margin-bottom: vw(160);
+	}
+	&__link {
+		font-weight: 700;
+		font-size: vw(20);
+		letter-spacing: 0.02em;
+		color: $lgreen;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		transition: $normal;
+		position: relative;
+		span {
+			margin-right: vw(10);
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: vw(2);
+				height: vw(2);
+				width: 100%;
+				left: 0;
+				background-color: $lgreen;
+				opacity: 0;
+				transition: $normal;
+			}
+		}
+		img {
+			transition: $normal;
+		}
+		&:hover {
+			span {
+				&::after {
+					opacity: 1;
+				}
+			}
+			img {
+				transform: rotate(45deg);
+			}
+		}
+	}
+	&__quality {
+		position: absolute;
+		width: vw(192);
+		height: vw(192);
+		background: $dgreen;
+		border-radius: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		top: 50%;
+		right: vw(-10);
+		transform: translate(100%, -50%);
+	}
+	&__quality-img {
+		width: vw(25);
+		height: vw(30);
+		margin-bottom: vw(10);
+	}
+	&__quality-text {
+		font-family: "PorscheNextTT";
+		font-size: vw(16);
+		line-height: vw(21);
+		/* or 131% */
+		letter-spacing: 0.02em;
+		color: $white;
+		margin: 0;
+	}
+	// @media (max-width: $large) {
+	// 	padding: vw(90) 0 vw(120);
+	// 	&__back {
+	// 		width: vw(850);
+	// 	}
+	// 	&__title {
+	// 		font-size: 40);
+	// 		line-height: 50);
+	// 	}
+	// 	&__text {
+	// 		font-size: 28);
+	// 		line-height: 35);
+	// 		margin-bottom: 110);
+	// 	}
+	// 	&__quality {
+	// 		padding: 10);
+	// 	}
+	// 	&__quality-text {
+	// 		font-size: 14);
+	// 		line-height: 18);
+	// 	}
+	// }
+	// @media (max-width: $medium) {
+	// 	padding: 70) 0 80);
+	// 	&__item {
+	// 		max-width: 500);
+	// 	}
+	// 	&__title {
+	// 		font-size: 34);
+	// 		line-height: 44);
+	// 	}
+	// 	&__text {
+	// 		font-size: 24);
+	// 		line-height: 28);
+	// 		margin-bottom: 80);
+	// 	}
+	// 	&__quality-text {
+	// 		font-size: 13);
+	// 		line-height: 15);
+	// 	}
+	// 	&__back {
+	// 		width: 600);
+	// 	}
+	// }
+	// @media (max-width: $tablets) {
+	// 	padding: 60) 0;
+	//
+	// 	&__title {
+	// 		font-size: 28);
+	// 		line-height: 35);
+	// 	}
+	// 	&__text {
+	// 		font-size: 22);
+	// 		line-height: 22);
+	// 		margin-bottom: 40);
+	// 	}
+	//
+	// }
+	@media (max-width: $phones) {
+		&__link {
+			margin-bottom: vw(50, 320);
+			img {
+				width: vw(15, 320);
+				height: vw(15, 320);
+			}
+		}
+		&__item {
+			max-width: none;
+		}
+		&__quality {
+			position: static;
+			transform: translate(0);
+		}
+		padding: vw(23, 320) 0 vw(110, 320);
+		&__title {
+			font-size: vw(22, 320);
+			line-height: vw(27, 320);
+			margin-bottom: vw(12, 320);
+		}
+		&__text {
+			font-size: vw(14, 320);
+			line-height: vw(20, 320);
+			margin-bottom: vw(13, 320);
+		}
+		&__link {
+			font-size: vw(11, 320);
+			img {
+				width: vw(11, 320);
+				height: vw(11, 320);
+			}
+		}
+		&__quality {
+			width: vw(100, 320);
+			height: vw(100, 320);
+			img {
+				width: vw(15, 320);
+				height: vw(15, 320);
+			}
+		}
+		&__quality-text {
+			font-size: vw(7, 320);
+			line-height: vw(10, 320);
+		}
+		&__back {
+			width: 100%;
+			height: vw(297, 320);
+			bottom: vw(-28, 320);
+		}
+	}
+}

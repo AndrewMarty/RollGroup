@@ -1,0 +1,92 @@
+.faq {
+	padding: vw(122) 0 vw(144);
+	background: $white;
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(14, 1fr);
+		grid-row-gap: vw(30);
+	}
+	&__name {
+		grid-column: span 5;
+	}
+	&__title {
+		margin: 0;
+	}
+	&__quastions {
+		grid-column: span 9;
+	}
+	&__img {
+		transition: $normal;
+	}
+	&__quastion {
+		cursor: pointer;
+		margin-bottom: vw(35);
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&_active {
+			.faq__wrapper {
+				display: block;
+			}
+			.faq__img {
+				transform: rotate(135deg);
+			}
+		}
+	}
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__img {
+		width: vw(15);
+		height: vw(15);
+	}
+	&__quastion-title {
+		font-style: normal;
+		font-weight: 500;
+		font-size: vw(24);
+		line-height: vw(29);
+	}
+	&__wrapper {
+		display: none;
+		font-family: "PorscheNextTT";
+		padding: vw(21) 0;
+		border-bottom: vw(1) solid #f1f5f5;
+		font-size: vw(18);
+		color: $quastion;
+	}
+	@media (max-width: $phones) {
+		padding: vw(20, 320) 0;
+		&__name {
+			grid-column: span 14;
+		}
+		&__quastions {
+			grid-column: span 14;
+		}
+		&__title {
+			max-width: vw(200, 320);
+			font-size: vw(22, 320);
+			line-height: vw(27, 320);
+			margin-bottom: vw(15, 320);
+		}
+		&__quastion-title {
+			font-size: vw(11, 320);
+			line-height: vw(13, 320);
+		}
+		&__grid {
+			gap: 0;
+		}
+		&__img {
+			width: vw(13, 320);
+			height: vw(13, 320);
+		}
+		&__wrapper {
+			font-size: vw(10, 320);
+			line-height: vw(16, 320);
+		}
+		&__quastion {
+			margin-bottom: vw(15, 320);
+		}
+	}
+}

@@ -1,0 +1,41 @@
+extends layouts/main
+block variables
+   - title = 'Installation'
+   - descreption = 'desctiption of installation'
+block content
+   .wrapper.main(id="swup" class="transition-fade")
+      include components/header/header
+      main
+         section.first.first__installation
+            .row.first__history
+               ul.first__history-list
+                  li.first__history-item Главная
+                  li.first__history-item Каталог
+                  li.first__history-item Монтаж и гарантии
+            .container 
+               .first__row.first__delivery-row
+                  .first__item.first__delivery-item 
+                     h1.first__title.first__delivery-title Монтаж и гарантии
+                     p.first__subtitle.
+                        Рольставни с оперативной доставкой и монтажом на объект
+         section.additional 
+            .container 
+               .additional__col 
+                  .additional__item
+                     .additional__inner 
+                        img(src="img/additional/icon_4.svg", alt="icon").additional__img
+                        h6.title.additional__title Монтаж:
+                     p.additional__text. 
+                        Доставка и монтаж роллет входит в стоимость работ;<br>
+                        Осуществляем монтаж в день доставки на объект;<br>
+                        В среднем на монтаж одной роллеты уходит 40 минут.
+                  .additional__item
+                     .additional__inner 
+                        img(src="img/additional/icon_5.svg", alt="icon").additional__img
+                        h6.title.additional__title Гарантии:
+                     p.additional__text. 
+                        Гарантируем соблюдение сроков и неизменную стоимость работ, фиксируем все в договоре;<br>
+                        Предоставляем гарантию 3 года по договору (ссылка на договор, открывается в новом окне);<br>
+                        Любую неисправность оперативно устраним за 1-2 дня.
+         include components/footer/footer
+append scripts

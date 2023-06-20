@@ -1,0 +1,376 @@
+.qwuiz {
+	padding: vw(90) 0;
+	background: $lwhite;
+	&__title {
+		margin-bottom: vw(20);
+		max-width: vw(1167);
+	}
+	&__subtitle {
+		font-size: vw(30);
+		line-height: vw(39);
+		letter-spacing: 0.02em;
+		margin: 0;
+		color: $main;
+		margin-bottom: vw(45);
+		font-family: "PorscheNextTT";
+	}
+	&__wrapper {
+		background-color: $white;
+		border-radius: vw(2);
+		overflow: hidden;
+	}
+	&__quastions {
+		display: flex;
+	}
+	&__num {
+		font-family: "PorscheNextTT";
+		color: $quastion;
+		font-weight: 400;
+		font-size: vw(18);
+		line-height: 140%;
+		display: flex;
+		height: vw(100);
+		justify-content: center;
+		align-items: center;
+		flex-grow: 1;
+		font-size: vw(18);
+		line-height: 140%;
+		letter-spacing: 0.05em;
+		&_active {
+			color: $white;
+			font-weight: 700;
+			background: $lgreen;
+		}
+	}
+	&__quastions {
+		margin-bottom: vw(35);
+	}
+	&__button {
+		img {
+			transition: $normal;
+		}
+		&:hover {
+			img {
+				transform: rotate(45deg);
+			}
+		}
+		img {
+			width: vw(15);
+			height: vw(15);
+		}
+	}
+	&__inner {
+		display: flex;
+		padding: 0 vw(51) vw(54) vw(115);
+	}
+	&__body {
+		width: 100%;
+		margin-right: vw(65);
+	}
+	&__quastion {
+		margin: 0;
+		font-weight: 450;
+		margin-bottom: vw(35);
+		font-size: vw(40);
+		line-height: vw(80);
+		text-align: center;
+		letter-spacing: 0.02em;
+	}
+	&__photo {
+		position: relative;
+		width: vw(400);
+		flex-shrink: 0;
+	}
+	&__photo-text {
+		position: absolute;
+		display: block;
+		width: 100%;
+		font-weight: 400;
+		font-size: vw(30);
+		line-height: vw(40);
+		letter-spacing: 0.04em;
+		left: 50%;
+		bottom: vw(50);
+		color: $white;
+		transform: translateX(-50%);
+		max-width: vw(290);
+		font-family: "PorscheNextTT";
+	}
+	&__photo-img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: vw(47) vw(29);
+		margin-bottom: vw(40);
+	}
+	&__img {
+		width: 100%;
+		object-fit: cover;
+		display: block;
+		margin-bottom: vw(10);
+	}
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__instruction {
+		font-weight: 500;
+		font-size: vw(15);
+		line-height: vw(25);
+		letter-spacing: 0.05em;
+		color: $black;
+	}
+	&__button {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		padding: vw(27) vw(50);
+		background-color: $lgreen;
+		border: none;
+		font-weight: 500;
+		font-size: vw(20);
+		letter-spacing: 0.02em;
+		color: $white;
+	}
+	&__arrow {
+		margin-left: vw(10);
+	}
+	&__item {
+		display: block;
+		cursor: pointer;
+	}
+	&__item:hover {
+		.qwuiz__box {
+			&::after {
+				opacity: 1;
+				border-color: $lgreen;
+			}
+		}
+	}
+	&__box {
+		width: vw(30);
+		height: vw(30);
+		background: $lwhite;
+		border: none;
+		border-radius: 50%;
+		margin-right: vw(9);
+		&::after {
+			opacity: 1;
+			border-color: #c8d8d8;
+			width: vw(3);
+			height: vw(5);
+		}
+	}
+	.check__input:checked + &__box {
+		background-color: $lgreen;
+		&::after {
+			border-color: $white;
+		}
+	}
+	&__subimg {
+		font-size: vw(15);
+		line-height: vw(18);
+		letter-spacing: 0.03em;
+		color: $black;
+		font-weight: 450;
+	}
+	// @media (max-width: $large) {
+	// 	&__subtitle {
+	// 		font-size: 25);
+	// 	}
+	// 	&__num {
+	// 		height: 70);
+	// 		font-size: 14);
+	// 	}
+	// 	&__quastion {
+	// 		font-size: 30);
+	// 	}
+	// 	&__box {
+	// 		width: 20);
+	// 		height: 20);
+	// 	}
+	// 	&__button {
+	// 		font-size: 16);
+	// 		padding: 20) 40);
+	// 	}
+	// 	&__subimg {
+	// 		font-size: 9);
+	// 	}
+	// 	&__photo-text {
+	// 		font-size: 25);
+	// 		line-height: 30);
+	// 	}
+	// 	&__instruction {
+	// 		font-size: 11);
+	// 	}
+	// 	&__inner {
+	// 		padding: 0) 51) 54);
+	// 	}
+	// }
+	// @media (max-width: $medium) {
+	// 	padding: 50) 0;
+	// 	&__quastion {
+	// 		font-size: 25);
+	// 		line-height: 40);
+	// 	}
+	// 	&__subtitle {
+	// 		font-size: 25);
+	// 		margin-bottom: 25);
+	// 	}
+	// 	&__photo {
+	// 		width: 300);
+	// 	}
+	// 	&__body {
+	// 		margin-right: 30);
+	// 	}
+	// 	&__grid {
+	// 		grid-gap: 30);
+	// 	}
+	// 	&__photo-text {
+	// 		font-size: 20);
+	// 		line-height: 22);
+	// 	}
+	// 	&__inner {
+	// 		padding: 0 25) 30);
+	// 	}
+	// 	&__button {
+	// 		font-size: 13);
+	// 		padding: 15) 32);
+	// 		img {
+	// 			width: 10);
+	// 			height: 10);
+	// 		}
+	// 	}
+	// 	&__instruction {
+	// 		font-size: 9);
+	// 	}
+	// }
+	// @media (max-width: $tablets) {
+	// 	&__num {
+	// 		height: 50);
+	// 		font-size: 12);
+	// 	}
+	// 	&__photo {
+	// 		display: none;
+	// 	}
+	// 	&__title {
+	// 		font-size: 34);
+	// 		line-height: 34);
+	// 		margin-bottom: 10);
+	// 	}
+	// 	&__subtitle {
+	// 		font-size: 19);
+	// 		margin-bottom: 20);
+	// 	}
+	// }
+	@media (max-width: $phones) {
+		padding-bottom: vw(28, 320);
+		&__photo {
+			display: none;
+		}
+		&__quastions {
+			display: none;
+		}
+		&__title {
+			font-size: vw(22, 320);
+			line-height: vw(27, 320);
+			max-width: none;
+		}
+		&__subtitle {
+			font-size: vw(14, 320);
+			line-height: vw(20, 320);
+		}
+		&__box {
+			width: vw(12, 320);
+			height: vw(12, 320);
+		}
+		&__grid {
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: vw(22, 320);
+		}
+		&__subimg {
+			font-size: vw(7, 320);
+		}
+		&__body {
+			margin-right: 0;
+		}
+		&__quastion {
+			display: none;
+		}
+		&__button {
+			padding: vw(7, 320) vw(23, 320);
+		}
+		&__num {
+			height: vw(50, 320);
+			font-size: vw(9, 320);
+		}
+		&__arrow {
+			width: vw(9, 320);
+			height: vw(9, 320);
+		}
+		&__box {
+			width: vw(15, 320);
+			height: vw(15, 320);
+			&::after {
+				width: vw(2, 320);
+				height: vw(4, 320);
+			}
+		}
+		&__arrow {
+			width: vw(10, 320) !important;
+			height: vw(10, 320) !important;
+		}
+		&__img {
+			margin-bottom: vw(4, 320);
+		}
+		&__button {
+			font-size: vw(10, 320);
+		}
+		&__instruction {
+			max-width: vw(120, 320);
+			font-size: vw(8, 320);
+			line-height: vw(10, 320);
+		}
+		&__subtitle {
+			max-width: vw(200, 320);
+		}
+		&__quastions {
+			margin-bottom: vw(27, 320);
+		}
+		&__inner {
+			padding: vw(15, 320) vw(15, 320) vw(15, 320);
+		}
+		&__box {
+			width: vw(11, 320);
+			height: vw(11, 320);
+			margin-right: vw(5, 320);
+		}
+		&__instruction {
+			font-size: vw(7, 320);
+			line-height: vw(10, 320);
+		}
+		&__subimg {
+			font-size: vw(6, 320);
+		}
+		&__num {
+			font-size: vw(10, 320);
+		}
+		&__button {
+			img {
+				width: vw(8, 320);
+				height: vw(8, 320);
+			}
+		}
+		&__grid {
+			grid-gap: vw(11, 320) vw(22, 320);
+		}
+	}
+}

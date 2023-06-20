@@ -1,0 +1,119 @@
+extends layouts/main
+block variables
+   - title = 'Houses'
+   - descreption = 'desctiption of secondpage'
+block content
+   .wrapper.main(id="swup" class="transition-fade")
+      include components/header/header
+      main
+         section.first.first__house
+            .row.first__history
+               ul.first__history-list
+                  li.first__history-item Главная
+                  li.first__history-item Каталог
+                  li.first__history-item Рольставни для дома
+            .container 
+               .first__row.first__house-row
+                  .first__item.first__house-item 
+                     span.first__suptitle В санкт-Петербурге и Ленобласти
+                     h1.first__title.first__house-title Рольставни для дома под ключ 
+                     .first__house-wrap
+                        p.first__subtitle.
+                           придадут вашему объекту исключительно 
+                           премиальный вид и защитят от осадков
+                        button.first__calc
+                           span.first__calc-text Рассчитать стоимость и получить предложение
+                           img(src="img/first/arrow.svg", alt="arrow")
+                        span.first__info Выезд замерщика в день обращения
+                  .first__item-mob
+                     button.first__btn-mob
+                        span.first__mob-name Рассчитать стоимость и получить предложение
+                        img(src="img/first/arrow.svg", alt="arrow")
+                     span.first__info.first__info-mob Выезд замерщика в день обращения
+         include components/content/content
+         include components/benefits/benefits
+         section.own.own-gray
+            .container 
+               .own__row 
+                  .own__item.own__second
+                     h3.own__title.title.
+                        Оцените
+                        невероятную
+                        прочность
+                        поликарбоната,
+                     p.own__subtitle. 
+                        из которого мы производим прозрачные рольставни
+                  .own__player
+                     img(src="img/own/video.png", alt="video").own__video
+                     .own__bottom
+                        h5.own__check Посмотрите видео с нашего производства
+                        .own__line 
+                        .own__controls 
+                           p.own__text Длительность: 2:32 мин
+                           button.own__play 
+                              img(src="img/own/play.svg", alt="play")
+         include components/basic/basic
+         include components/development/development
+         section.content.content_big
+            .container 
+               h2.title.content__title Краткий текстовый блок
+               p.content__text. 
+                  Рольставни на окна металлические, цена которых не столь высока, приводятся в движение с помощью электрического механизма или вручную. В закрытом положении они фиксируются с помощью замка. В поднятом состоянии они скручиваются в рулон, который располагается в специальном коробе. Устанавливается он над оконным проемом. Цена и функции зависят от того материала, из которого они выполнены. Обычно для производства применяется сплав алюминия, пластик или сталь. Пластиковые изделия для окон не подходят, так как циклы работы оставляют на поверхности потертости и царапины. При этом полотно неизбежно деформируется. Алюминий радует долговечностью, не подвергается нежелательной коррозии, может использоваться длительное времени и обладает достаточной пластичностью.
+                  Рольставни для окон не обладают такими недостатками. Внешне они смотрятся очень привлекательно, поэтому могут стать стильным украшением любого фасада здания. Эксплуатировать их очень легко, при этом они обеспечивают отличную теплоизоляцию, а также спасают от палящих лучей солнца. Без специальных навыков и инструментов вряд ли кто-то сможет разбить стекло и проникнуть в здание. Роллеты можно монтировать в брусовых и бревенчатых домах.
+         include components/places/places
+         include components/types/types
+         section.price.price-second
+            .container
+               .price__subgrid 
+                  .price__subgrid-row
+                     .price__information 
+                        h5.price__information-title Узнайте точную стоимость на замере
+                        p.price__information-subtitle. 
+                           Специалист приедет в удобное для Вас время, проконсультирует по всем интересующим вопросам, а также привезет образцы материалов, из которых будут изготовлены изделия
+                     .price__items
+                        .price__item-number 
+                           span.price__number Введите номер телефона
+                           input(type="text" placeholder="+7 (___) ___-__-__").price__input
+                           label.check.price__check
+                              input(type='checkbox').check__input
+                              .check__box.price__box
+                              span.check__text.price__text 
+                                 |Нажимая кнопку вы соглашаетесь  с условиями 
+                                 a.price__link(href="#") Политики конфиденциальности
+                        button.price__btn
+                           span Вызвать замерщика
+                           img(src="img/price/arrow.svg", alt="arrow")
+                        label.check.price__check.price__check-mob
+                           input(type='checkbox').check__input
+                           .check__box.price__box
+                           span.check__text.price__text 
+                              |Нажимая кнопку вы соглашаетесь  с условиями 
+                              a.price__link(href="#") Политики конфиденциальности
+                     img(src="img/price/background.png", alt="background").price__background
+         include components/control/control
+         include components/ways/ways
+         include components/scheme/scheme
+         include components/about/about
+         include components/works/works
+         section.kinds 
+            ol.kinds__list
+               li.kinds__item
+                  span.kinds__category типы роллетов
+                  img(src="img/kinds/photo_1.png" alt="background").kinds__img
+                  span.kinds__name Рольставни на окна
+               li.kinds__item 
+                  span.kinds__category типы роллетов
+                  img(src="img/kinds/photo_2.png" alt="background").kinds__img
+                  span.kinds__name Рольставни на окна
+               li.kinds__item 
+                  span.kinds__category типы роллетов
+                  img(src="img/kinds/photo_1.png" alt="background").kinds__img
+                  span.kinds__name антивандальные рольставни
+               li.kinds__item 
+                  span.kinds__category типы роллетов
+                  img(src="img/kinds/photo_3.png" alt="background").kinds__img
+                  span.kinds__name Металлические рольставни
+         include components/seo/seo
+         include components/information/information
+         include components/footer/footer
+append scripts

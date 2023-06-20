@@ -1,0 +1,161 @@
+.information {
+	overflow: hidden;
+	background: $lwhite;
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item {
+		position: relative;
+		padding: vw(70) 0 vw(80);
+		display: flex;
+		align-items: center;
+	}
+	&__img {
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 0;
+	}
+	&__inner {
+		position: relative;
+		max-width: vw(305);
+		z-index: 1;
+	}
+	&__title {
+		color: $white;
+		font-weight: 700;
+		font-size: vw(36);
+		line-height: 133.4%;
+		margin: 0;
+		margin-bottom: vw(30);
+		&_black {
+			color: $main;
+		}
+	}
+	&__small {
+		font-size: 1.0416666667vw;
+		line-height: 1.5625vw;
+		font-family: "PorscheNextTT";
+		display: block;
+		font-weight: 400;
+	}
+	&__button-calc {
+		cursor: pointer;
+		max-width: vw(250);
+		display: block;
+		text-align: center;
+		border: vw(2) solid $white;
+		padding: vw(26) vw(28);
+		color: $lgreen;
+		font-weight: 450;
+		font-size: vw(16);
+		line-height: 170%;
+		letter-spacing: 0.02em;
+		background-color: $white;
+		transition: $normal;
+		&:hover {
+			color: $white;
+			background: $lgreen;
+		}
+	}
+	&__button-telegram {
+		max-width: vw(260);
+		cursor: pointer;
+		padding: vw(25) vw(20);
+		background-color: #05a0eb;
+		display: flex;
+		align-items: center;
+		font-weight: 450;
+		font-size: vw(16);
+		line-height: 170%;
+		letter-spacing: 0.02em;
+		color: #f1f5f5;
+		&:hover {
+			.information__img-telegram {
+				transform: scale(1.15);
+			}
+		}
+	}
+	&__img-telegram {
+		transition: $normal;
+		margin-right: vw(20);
+		width: vw(30);
+		height: vw(25);
+	}
+	&__item-left {
+		position: relative;
+		width: 44%;
+		&::before {
+			position: absolute;
+			content: "";
+			display: block;
+			width: 100vw;
+			background: $lgreen;
+			height: 100%;
+			right: 0;
+			top: 0;
+			z-index: 0;
+		}
+	}
+	&__item-right {
+		width: 50%;
+	}
+	@media (max-width: $phones) {
+		&__button-telegram {
+			max-width: vw(150, 320);
+			font-size: vw(12, 320);
+			padding: vw(10, 320) vw(20, 320);
+			img {
+				width: vw(11, 320);
+				height: vw(15, 320);
+			}
+		}
+		&__title_black {
+			max-width: 186px;
+		}
+
+		&__item {
+			width: 100%;
+		}
+		&__row {
+			flex-wrap: wrap;
+		}
+		&__item-left {
+			&::before {
+				width: 100vw;
+				right: vw(-22, 320);
+			}
+		}
+		&__img {
+			display: none;
+			right: -15px;
+			top: auto;
+			bottom: 0;
+			height: vw(185, 320);
+		}
+		&__title {
+			font-size: vw(22, 320);
+			line-height: vw(27, 320);
+		}
+		&__item {
+			padding: vw(25, 320) 0;
+		}
+		&__inner {
+			max-width: vw(220, 320);
+		}
+		&__button-calc {
+			max-width: vw(150, 320);
+			font-size: vw(10, 320);
+			line-height: 170%;
+			padding: vw(15, 320);
+		}
+		&__small {
+			padding-top: vw(8, 320);
+			max-width: vw(130, 320);
+			font-size: vw(10, 320);
+			line-height: 170%;
+		}
+	}
+}

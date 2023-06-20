@@ -1,0 +1,30 @@
+section.catalog 
+   .container 
+      .catalog__row
+         .catalog__item 
+            h4.catalog__title.title(data-aos="fade-right"). 
+               Скачайте наш<br>
+               каталог с портфолио<br>
+               реализованных проектов<br>
+               и ценами в 1 клик<br>
+            p.catalog__subtitle(data-aos="fade") и вдохновитесь идеями 
+            .catalog__inner
+               .catalog__field
+                  span.catalog__field-name Куда прислать презентацию?
+                  .catalog__list 
+                     span.catalog__current WhatsApp
+                     img(src="img/catalog/whatsapp.svg", alt="whatsapp").catalog__img
+               .catalog__field
+                  span.catalog__field-name Введите номер телефона
+                  input(type="text" placeholder="+7 (___) ___-__-__").catalog__number.catalog__input
+               button.catalog__button
+                  span.catalog__button-inner Скачать каталог
+                  img(src="img/catalog/arrow.svg", alt="arrow")
+            label.check.catalog__check
+               input(type='checkbox').check__input
+               .check__box.catalog__box
+               span.check__text.catalog__text Нажимая кнопку вы соглашаетесь  с условиями 
+                  a.catalog__link(href="#") Политики конфиденциальности
+         img(src="img/catalog/catalog-2.png", alt="").catalog__background(data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000")
+         img(src="img/catalog/catalog-1.png", alt="").catalog__background.catalog__background-sup(data-aos="fade-left" data-aos-duration="1000")
+            //- img(src="img/catalog/background.png", alt="background")

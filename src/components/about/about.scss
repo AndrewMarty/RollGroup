@@ -1,0 +1,562 @@
+.about {
+	color: $white;
+	padding: vw(180) 0 vw(650);
+	position: relative;
+	&__back-wrapper {
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	&__back-inner {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	&__background {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		background: center/cover url("../img/about/background_1.png");
+	}
+	&__grid {
+		position: relative;
+		z-index: 10;
+		display: grid;
+		grid-template-columns: repeat(14, 1fr);
+		grid-gap: vw(30);
+	}
+	&__item {
+		grid-column: span 6;
+	}
+	&__instruction {
+		display: none;
+	}
+	&__title {
+		margin: 0;
+		font-size: vw(57);
+		line-height: vw(75);
+		/* or 125% */
+
+		letter-spacing: 0.02em;
+		margin-bottom: vw(20);
+	}
+	&__subtitle {
+		font-size: vw(24);
+		line-height: vw(34);
+		font-family: "PorscheNextTT";
+		letter-spacing: 0.02em;
+		margin: 0;
+		margin-bottom: vw(180);
+	}
+	&__title-second {
+		max-width: vw(490);
+		font-weight: 700;
+		font-size: vw(32);
+		line-height: vw(42);
+		letter-spacing: 0.02em;
+		margin: 0;
+		margin-bottom: vw(20);
+	}
+	&__sub-second {
+		max-width: vw(530);
+		font-size: vw(24);
+		line-height: vw(34);
+		font-family: "PorscheNextTT";
+		letter-spacing: 0.02em;
+		margin: 0;
+		margin-bottom: vw(20);
+	}
+	&__more {
+		display: inline-block;
+		color: $lgreen;
+		font-weight: 700;
+		font-size: vw(20);
+		letter-spacing: 0.02em;
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		img {
+			transition: $normal;
+		}
+		&:hover {
+			img {
+				transform: rotate(45deg);
+			}
+		}
+	}
+	&__more-text {
+		margin-right: vw(15);
+	}
+	&__item-middle {
+		grid-column: span 4;
+		align-self: flex-end;
+	}
+	&__item-small {
+		grid-column: span 4;
+		text-align: right;
+	}
+	&__achievement {
+		font-weight: 700;
+		font-size: vw(60);
+		line-height: vw(75);
+		letter-spacing: 0.02em;
+		margin: 0;
+	}
+	&__small {
+		font-size: vw(28);
+	}
+	&__item-inner {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+	&__play {
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: vw(100);
+		height: vw(100);
+		cursor: pointer;
+		background: $lgreen;
+		border: none;
+		animation: pulse 2s infinite;
+		transition: $normal;
+		img {
+			width: vw(15);
+			height: vw(16);
+		}
+	}
+	&__more {
+		img {
+			width: vw(15);
+			height: vw(15);
+		}
+	}
+	&__text {
+		margin: 0;
+		max-width: vw(175);
+		font-size: vw(16);
+		line-height: vw(27);
+		font-family: "PorscheNextTT";
+		text-align: right;
+		letter-spacing: 0.02em;
+		margin-right: vw(35);
+	}
+	&__achievement-name {
+		display: block;
+		font-family: "PorscheNextTT";
+		font-size: vw(24);
+		line-height: vw(34);
+		letter-spacing: 0.02em;
+		margin-bottom: vw(85);
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__documentation {
+		overflow: hidden;
+		position: absolute;
+		display: flex;
+		bottom: vw(-310);
+		left: 0;
+		width: 100vw;
+		z-index: 10;
+		&::before {
+			content: "";
+			height: 100%;
+			background: $lgreen;
+			width: 100vw;
+			right: 29%;
+			position: absolute;
+			top: 0;
+		}
+	}
+	&__documentation-row {
+		padding: vw(170) 0;
+		position: relative;
+		display: flex;
+	}
+	&__documentation-item {
+		position: relative;
+		max-width: vw(510);
+		margin-right: vw(80);
+	}
+	&__documentation-title {
+		margin: 0;
+		font-weight: 450;
+		font-size: vw(60);
+		line-height: vw(75);
+		padding-right: vw(10);
+		letter-spacing: 0.02em;
+		margin-bottom: vw(20);
+	}
+	&__documentation-subtitle {
+		font-size: vw(24);
+		line-height: vw(34);
+		font-family: "PorscheNextTT";
+		letter-spacing: 0.02em;
+
+		margin: 0;
+	}
+	&__slider {
+		overflow: hidden;
+	}
+	&__controls {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		display: flex;
+	}
+	&__button {
+		cursor: pointer;
+		background: #2d2b2b;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		width: vw(65);
+		height: vw(65);
+		margin-right: vw(2);
+		transition: $normal;
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			background: $lgreen;
+		}
+	}
+	&__mob {
+		display: none;
+	}
+	&__more-mob {
+		display: none;
+	}
+	&__mob-wrap {
+		display: no ne;
+	}
+	&__more-mob {
+		span {
+			text-decoration: none;
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: vw(2);
+				height: vw(2);
+				width: 100%;
+				left: 0;
+				background-color: $lgreen;
+				opacity: 0;
+				transition: $normal;
+			}
+		}
+		img {
+			transition: $normal;
+		}
+		&:hover {
+			span {
+				&::after {
+					opacity: 1;
+				}
+			}
+			img {
+				transform: rotate(45deg);
+			}
+		}
+		img {
+			transition: $normal;
+			width: vw(15);
+			height: vw(15);
+		}
+	}
+	&__button {
+		img {
+			width: vw(15);
+			height: vw(15);
+		}
+	}
+	// @media (max-width: $medium) {
+	//
+	//
+	// }
+	@media (max-width: $phones) {
+		padding-top: vw(50, 320);
+		padding-bottom: vw(30, 320);
+		&__mob-wrap {
+			display: block;
+		}
+		&__instruction {
+			display: flex;
+			align-items: center;
+			margin-bottom: vw(20, 320);
+		}
+		&__instruction-text {
+			font-weight: 450;
+			font-size: vw(14, 320);
+			line-height: vw(17, 320);
+			letter-spacing: 0.05em;
+		}
+		&__cursor {
+			margin-right: vw(8, 320);
+		}
+		&__documentation-item {
+			max-width: none;
+		}
+		&__title {
+			font-size: vw(26, 320);
+			line-height: vw(34, 320);
+		}
+		&__subtitle {
+			font-size: vw(18, 320);
+			line-height: vw(25, 320);
+			margin-bottom: 0;
+		}
+		&__item,
+		&__item-middle,
+		&__item-small {
+			grid-column: span 1;
+		}
+		&__grid {
+			grid-template-columns: 1fr;
+			row-gap: 0;
+		}
+		&__documentation {
+			bottom: vw(-260, 320);
+			&::before {
+				right: vw(15, 320);
+			}
+		}
+		&__documentation-title {
+			font-size: vw(26, 320);
+			line-height: vw(34, 320);
+			margin-bottom: vw(15, 320);
+		}
+		&__mob {
+			justify-content: space-evenly;
+			margin-bottom: vw(40, 320);
+		}
+		&__documentation-row {
+			overflow: hidden;
+			flex-wrap: wrap;
+			padding: vw(20, 320) vw(15, 320);
+		}
+		&__subtitle {
+			margin-bottom: vw(20, 320);
+		}
+		&__achievement-name {
+			font-size: vw(16, 320);
+			line-height: vw(18, 320);
+		}
+		&__achievement-item {
+			max-width: none;
+			margin-right: 0;
+			margin-bottom: vw(20, 320);
+		}
+		&__achievement {
+			font-size: vw(36, 320);
+			line-height: vw(44, 320);
+		}
+		&__item-small {
+			display: none;
+		}
+		&__title-second {
+			font-size: vw(18, 320);
+			line-height: vw(24, 320);
+			margin-bottom: vw(15, 320);
+			max-width: none;
+		}
+		&__item-inner {
+			flex-direction: row-reverse;
+		}
+		&__text {
+			max-width: vw(250, 320);
+			text-align: left;
+			font-size: vw(14, 320);
+			line-height: vw(18, 320);
+			margin-right: 0;
+		}
+		&__more {
+			display: none;
+		}
+		&__play {
+			width: vw(75, 320);
+			height: vw(75, 320);
+			margin-right: vw(20, 320);
+		}
+		&__sub-second {
+			max-width: none;
+			font-size: vw(18, 320);
+			line-height: vw(25, 320);
+		}
+		&__controls {
+			display: none;
+		}
+		&__slider {
+			width: 100vw;
+			overflow: hidden;
+			flex-shrink: 0;
+		}
+		&__mob {
+			display: flex;
+		}
+		&__documentation-subtitle {
+			font-size: vw(18, 320);
+			line-height: vw(26, 320);
+			margin-bottom: vw(12, 320);
+		}
+		&__item-inner {
+			margin-bottom: vw(10, 320);
+		}
+		&__play {
+			img {
+				width: vw(11, 320);
+				height: vw(11, 320);
+			}
+		}
+		&__more-mob {
+			display: flex;
+			font-size: vw(15, 320);
+			img {
+				width: vw(11, 320);
+				height: vw(11, 320);
+			}
+		}
+		padding-top: vw(20, 320);
+		padding-bottom: vw(290, 320);
+		&__instruction {
+			display: flex;
+			align-items: center;
+			margin-bottom: vw(20, 320);
+		}
+		&__instruction-text {
+			font-weight: 450;
+			font-size: vw(10, 320);
+			line-height: vw(13, 320);
+			letter-spacing: 0.05em;
+		}
+		&__cursor {
+			margin-right: vw(8, 320);
+		}
+		&__title {
+			font-size: vw(22, 320);
+			line-height: vw(27, 320);
+		}
+		&__subtitle {
+			font-size: vw(14, 320);
+			line-height: vw(20, 320);
+			margin-bottom: 0;
+		}
+		&__item,
+		&__item-middle,
+		&__item-small {
+			grid-column: span 1;
+		}
+		&__grid {
+			grid-template-columns: 1fr;
+			row-gap: 0;
+		}
+		&__documentation {
+			bottom: vw(-260, 320);
+			&::before {
+				right: 15px;
+			}
+		}
+		&__documentation-title {
+			font-size: vw(22, 320);
+			line-height: vw(27, 320);
+			margin-bottom: vw(10, 320);
+		}
+		&__mob {
+			justify-content: space-evenly;
+			margin-bottom: vw(40, 320);
+		}
+		&__documentation-row {
+			overflow: hidden;
+			flex-wrap: wrap;
+			padding: vw(20, 320) vw(15, 320);
+		}
+		&__subtitle {
+			margin-bottom: vw(20, 320);
+		}
+		&__achievement-name {
+			font-size: vw(12, 320);
+			line-height: vw(14, 320);
+		}
+		&__achievement-item {
+			max-width: none;
+			margin-right: 0;
+			margin-bottom: vw(20, 320);
+		}
+		&__achievement {
+			font-size: vw(32, 320);
+			line-height: vw(40, 320);
+		}
+		&__item-small {
+			display: none;
+		}
+		&__title-second {
+			font-size: vw(14, 320);
+			line-height: vw(18, 320);
+			margin-bottom: vw(10, 320);
+		}
+		&__item-inner {
+			flex-direction: row-reverse;
+		}
+		&__text {
+			max-width: vw(110, 320);
+			text-align: left;
+			font-size: vw(10, 320);
+			line-height: vw(14, 320);
+			margin-right: 0;
+		}
+		&__more {
+			display: none;
+		}
+		&__title-second {
+			margin-bottom: vw(15, 320);
+		}
+		&__play {
+			width: vw(75, 320);
+			height: vw(75, 320);
+			margin-right: vw(20, 320);
+		}
+		&__sub-second {
+			font-size: vw(14, 320);
+			line-height: vw(20, 320);
+			margin-bottom: vw(17, 320);
+		}
+		&__controls {
+			display: none;
+		}
+		&__slider {
+			width: 100vw;
+			overflow: hidden;
+			flex-shrink: 0;
+		}
+		&__mob {
+			display: flex;
+		}
+		&__documentation-subtitle {
+			font-size: vw(14, 320);
+			line-height: vw(20, 320);
+			margin-bottom: vw(12, 320);
+		}
+		&__item-inner {
+			margin-bottom: vw(10, 320);
+		}
+		&__more-mob {
+			display: flex;
+			font-size: vw(11, 320);
+			img {
+				width: vw(11, 320);
+				height: vw(11, 320);
+			}
+		}
+	}
+}

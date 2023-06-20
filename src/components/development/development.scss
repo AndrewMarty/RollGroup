@@ -1,0 +1,112 @@
+.development {
+	padding: vw(140) 0 vw(115);
+	overflow: hidden;
+	position: relative;
+	background: #f7f7f7;
+	.container {
+		position: relative;
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		width: 55%;
+		height: 100%;
+		right: 0;
+		top: 0;
+		z-index: 0;
+		background: $lgreen;
+	}
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(14, 1fr);
+		grid-gap: vw(30);
+		align-items: center;
+	}
+	&__item {
+		grid-column: span 6;
+	}
+	&__wrap {
+		max-width: vw(485);
+		grid-column: 8 / span 5;
+	}
+	&__logo {
+		img {
+			width: vw(200);
+		}
+	}
+	&__photo {
+		width: 100%;
+		object-fit: cover;
+	}
+	&__title {
+		font-weight: 450;
+		font-size: vw(60);
+		line-height: vw(75);
+		letter-spacing: 0.02em;
+		margin-bottom: vw(50);
+	}
+	&__icon {
+		margin-bottom: vw(45);
+	}
+	&__green {
+		color: $lgreen;
+	}
+	&__text {
+		margin: 0;
+		font-weight: 450;
+		font-size: vw(24);
+		line-height: vw(38);
+		letter-spacing: 0.02em;
+	}
+	@media (max-width: $phones) {
+		padding: vw(60, 320) 0 vw(66, 320);
+		&::before {
+			display: none;
+		}
+		&__item {
+			grid-column: span 14;
+			margin-bottom: vw(100, 320);
+		}
+		&__icon {
+			margin-bottom: vw(30, 320);
+		}
+		&__title {
+			max-width: none;
+			font-size: vw(24, 320);
+			line-height: vw(27, 320);
+			margin-bottom: vw(20, 320);
+			font-size: vw(22, 320);
+		}
+		&__icon {
+			width: vw(48, 320);
+			height: vw(58, 320);
+			margin-bottom: vw(30, 320);
+		}
+		&__photo {
+			position: relative;
+			z-index: 1;
+		}
+		&__wrap {
+			position: relative;
+			max-width: none;
+			&::after {
+				content: "";
+				width: 100vw;
+				left: vw(-22, 320);
+				top: vw(-40, 320);
+				height: 200vh;
+				z-index: 0;
+				position: absolute;
+				display: block;
+				background: $lgreen;
+			}
+		}
+		&__text {
+			font-size: vw(16, 320);
+			line-height: vw(22, 320);
+		}
+		&__wrap {
+			grid-column: 1 / span 14;
+		}
+	}
+}

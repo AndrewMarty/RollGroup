@@ -1,0 +1,349 @@
+mixin item(name)
+   li.examples__filter-point
+      label.check.examples__check
+         input(type='checkbox').check__input
+         .check__box.examples__box
+         span.examples__filter-text.check__text= name
+section.examples
+   .container
+      .examples__row 
+         .examples__menu 
+            h4.examples__title.title(data-aos="fade-right"). 
+               Посмотрите
+               наши работы
+               на разных
+               объектах
+            .examples__settings
+               span.examples__settings-text Фильтр 
+               .examples__settings-box 
+                  img(src="img/examples/filter.svg", alt="filter").examples__filter-img
+            .examples__wrap
+               .examples__wrap-back
+               .examples__wrap-inner
+                  .examples__filter-item(data-aos="fade-right")
+                     span.examples__filter-name Тип роллетной системы
+                     ul.examples__filter-list
+                        +item('Прозрачные рольставни ')
+                        +item('Антивандальные рольставни ')
+                        +item('Декоративные рольставни')
+                        +item('Решетчатые ')
+                        +item('Рольворота')
+                        +item('Гаражные ворота')
+                  .examples__filter-item(data-aos="fade-right")
+                     span.examples__filter-name Объект
+                     ul.examples__filter-list
+                        +item('Бизнес ')
+                        +item('Для террасы ')
+                        +item('Частный дом')
+                        +item('Беседка ')
+                  .examples__filter-item(data-aos="fade-right")
+                     span.examples__filter-name Город
+                     ul.examples__filter-list
+                        +item('Москва ')
+                        +item('Нижний Новгород')
+                        +item('Самара')
+                        +item('Краснодарский край')
+                  a.examples__more(href="#" data-aos="fade-right")
+                     span Смотреть все
+                     img(src="img/examples/arrow.svg", alt="arrow")
+                  .examples__filter-item(data-aos="fade-right")
+                     span.examples__filter-name Сложность
+                     ul.examples__filter-list
+                        li.examples__filter-point
+                           label.check.examples__check
+                              input(type='checkbox').check__input
+                              .check__box.examples__box
+                              span.examples__filter-text.check__text.examples__rate
+                                 img(src="img/examples/star_1.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_2.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_2.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_2.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_2.svg", alt="star").examples__rate-img
+                        li.examples__filter-point
+                           label.check.examples__check
+                              input(type='checkbox').check__input
+                              .check__box.examples__box
+                              span.examples__filter-text.check__text.examples__rate
+                                 img(src="img/examples/star_1.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_1.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_2.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_2.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_2.svg", alt="star").examples__rate-img
+                        li.examples__filter-point
+                           label.check.examples__check
+                              input(type='checkbox').check__input
+                              .check__box.examples__box
+                              span.examples__filter-text.check__text.examples__rate
+                                 img(src="img/examples/star_1.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_1.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_1.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_2.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_2.svg", alt="star").examples__rate-img
+                        li.examples__filter-point
+                           label.check.examples__check
+                              input(type='checkbox').check__input
+                              .check__box.examples__box
+                              span.examples__filter-text.check__text.examples__rate
+                                 img(src="img/examples/star_1.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_1.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_1.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_1.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_2.svg", alt="star").examples__rate-img
+                        li.examples__filter-point
+                           label.check.examples__check
+                              input(type='checkbox').check__input
+                              .check__box.examples__box
+                              span.examples__filter-text.check__text.examples__rate
+                                 img(src="img/examples/star_1.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_1.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_1.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_1.svg", alt="star").examples__rate-img
+                                 img(src="img/examples/star_1.svg", alt="star").examples__rate-img
+                  button.examples__reset(data-aos="fade-right") Сбросить фильтр
+            button.examples__all(data-aos="fade")
+               span.examples__all-text Перейти в полное портфолио
+               <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="examples__arrow-full">
+               <path d="M13.2396 0.274102L-0.0185547 13.5322L1.42255 14.9733L14.6807 1.7152L13.2396 0.274102Z" fill="#38BC80"></path>
+               <path d="M14.9996 7.09239H12.9616V2.03804H7.90723V0H14.9996V7.09239Z" fill="#38BC80"></path>
+               </svg>
+         .examples__items
+            .examples__card
+               .examples__galery
+                  .examples__inner.swiper-wrapper
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_1.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_2.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_1.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_2.png", alt="photo")
+                  .examples__play
+                     img(src="img/examples/play.svg", alt="play")
+                  .examples__tags.examples__tags_mob
+                     .examples__tag #прозрачные рольставни
+                     .examples__tag.examples__tag_purple #беседка
+                     .examples__tag.examples__tag_red #москва
+                  .examples__bottom
+                     .examples__controls
+                        .examples__buttons
+                           .examples__button.examples__button-prev
+                              img(src="img/complex/prev.svg", alt="arrow")
+                           .examples__button.examples__button-next
+                              img(src="img/complex/next.svg", alt="arrow")
+                        .examples__tags
+                           .examples__tag #прозрачные рольставни
+                           .examples__tag.examples__tag_purple #беседка
+                           .examples__tag.examples__tag_red #москва
+                  .examples__dots
+               .examples__hard
+                  span.examples__hard-text Сложность
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_2.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_2.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_2.svg", alt="star").examples__hard-star
+               h4.examples__card-name Прозрачные рольставни для веранды с автоматическим управлением
+               .examples__card-wrapper
+                  a.examples__card-more(href="#") Смотреть подробнее
+                  img(src="img/examples/arrow-green.svg", alt="arrow")
+            .examples__card
+               .examples__galery
+                  .examples__inner.swiper-wrapper
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_2.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_1.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_2.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_1.png", alt="photo")
+                  .examples__tags.examples__tags_mob
+                     .examples__tag #прозрачные рольставни
+                     .examples__tag.examples__tag_purple #беседка
+                     .examples__tag.examples__tag_red #москва
+                  .examples__bottom
+                     .examples__controls
+                        .examples__buttons
+                           .examples__button.examples__button-prev
+                              img(src="img/complex/prev.svg", alt="arrow")
+                           .examples__button.examples__button-next
+                              img(src="img/complex/next.svg", alt="arrow")
+                        .examples__tags
+                           .examples__tag #прозрачные рольставни
+                           .examples__tag.examples__tag_purple #беседка
+                           .examples__tag.examples__tag_red #москва
+                  .examples__dots
+               .examples__hard
+                  span.examples__hard-text Сложность
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+               h4.examples__card-name Прозрачные рольставни для веранды с автоматическим управлением
+               .examples__card-wrapper
+                  a.examples__card-more(href="#") Смотреть подробнее
+                  img(src="img/examples/arrow-green.svg", alt="arrow")
+            .examples__card
+               .examples__galery
+                  .examples__inner.swiper-wrapper
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_1.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_2.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_1.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_2.png", alt="photo")
+                  .examples__play
+                     img(src="img/examples/play.svg", alt="play")
+                  .examples__tags.examples__tags_mob
+                     .examples__tag #прозрачные рольставни
+                     .examples__tag.examples__tag_purple #беседка
+                     .examples__tag.examples__tag_red #москва
+                  .examples__bottom
+                     .examples__controls
+                        .examples__buttons
+                           .examples__button.examples__button-prev
+                              img(src="img/complex/prev.svg", alt="arrow")
+                           .examples__button.examples__button-next
+                              img(src="img/complex/next.svg", alt="arrow")
+                        .examples__tags
+                           .examples__tag #прозрачные рольставни
+                           .examples__tag.examples__tag_purple #беседка
+                           .examples__tag.examples__tag_red #москва
+                  .examples__dots
+               .examples__hard
+                  span.examples__hard-text Сложность
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_2.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_2.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_2.svg", alt="star").examples__hard-star
+               h4.examples__card-name Прозрачные рольставни для веранды с автоматическим управлением
+               .examples__card-wrapper
+                  a.examples__card-more(href="#") Смотреть подробнее
+                  img(src="img/examples/arrow-green.svg", alt="arrow")
+            .examples__card
+               .examples__galery
+                  .examples__inner.swiper-wrapper
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_2.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_1.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_2.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_1.png", alt="photo")
+                  .examples__tags.examples__tags_mob
+                     .examples__tag #прозрачные рольставни
+                     .examples__tag.examples__tag_purple #беседка
+                     .examples__tag.examples__tag_red #москва
+                  .examples__bottom
+                     .examples__controls
+                        .examples__buttons
+                           .examples__button.examples__button-prev
+                              img(src="img/complex/prev.svg", alt="arrow")
+                           .examples__button.examples__button-next
+                              img(src="img/complex/next.svg", alt="arrow")
+                        .examples__tags
+                           .examples__tag #прозрачные рольставни
+                           .examples__tag.examples__tag_purple #беседка
+                           .examples__tag.examples__tag_red #москва
+                  .examples__dots
+               .examples__hard
+                  span.examples__hard-text Сложность
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+               h4.examples__card-name Прозрачные рольставни для веранды с автоматическим управлением
+               .examples__card-wrapper
+                  a.examples__card-more(href="#") Смотреть подробнее
+                  img(src="img/examples/arrow-green.svg", alt="arrow")
+            .examples__card
+               .examples__galery
+                  .examples__inner.swiper-wrapper
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_1.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_2.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_1.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_2.png", alt="photo")
+                  .examples__play
+                     img(src="img/examples/play.svg", alt="play")
+                  .examples__tags.examples__tags_mob
+                     .examples__tag #прозрачные рольставни
+                     .examples__tag.examples__tag_purple #беседка
+                     .examples__tag.examples__tag_red #москва
+                  .examples__bottom
+                     .examples__controls
+                        .examples__buttons
+                           .examples__button.examples__button-prev
+                              img(src="img/complex/prev.svg", alt="arrow")
+                           .examples__button.examples__button-next
+                              img(src="img/complex/next.svg", alt="arrow")
+                        .examples__tags
+                           .examples__tag #прозрачные рольставни
+                           .examples__tag.examples__tag_purple #беседка
+                           .examples__tag.examples__tag_red #москва
+                  .examples__dots
+               .examples__hard
+                  span.examples__hard-text Сложность
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_2.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_2.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_2.svg", alt="star").examples__hard-star
+               h4.examples__card-name Прозрачные рольставни для веранды с автоматическим управлением
+               .examples__card-wrapper
+                  a.examples__card-more(href="#") Смотреть подробнее
+                  img(src="img/examples/arrow-green.svg", alt="arrow")
+            .examples__card
+               .examples__galery
+                  .examples__inner.swiper-wrapper
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_2.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_1.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_2.png", alt="photo")
+                     .examples__photo.swiper-slide
+                        img(src="img/examples/photo_1.png", alt="photo")
+                  .examples__tags.examples__tags_mob
+                     .examples__tag #прозрачные рольставни
+                     .examples__tag.examples__tag_purple #беседка
+                     .examples__tag.examples__tag_red #москва
+                  .examples__bottom
+                     .examples__controls
+                        .examples__buttons
+                           .examples__button.examples__button-prev
+                              img(src="img/complex/prev.svg", alt="arrow")
+                           .examples__button.examples__button-next
+                              img(src="img/complex/next.svg", alt="arrow")
+                        .examples__tags
+                           .examples__tag #прозрачные рольставни
+                           .examples__tag.examples__tag_purple #беседка
+                           .examples__tag.examples__tag_red #москва
+                  .examples__dots
+               .examples__hard
+                  span.examples__hard-text Сложность
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+                  img(src="img/examples/star_1.svg", alt="star").examples__hard-star
+               h4.examples__card-name Прозрачные рольставни для веранды с автоматическим управлением
+               .examples__card-wrapper
+                  a.examples__card-more(href="#") Смотреть подробнее
+                  img(src="img/examples/arrow-green.svg", alt="arrow")
+         button.examples__all.examples__all-mob
+            span.examples__all-text Перейти в полное портфолио
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.2396 0.274102L-0.0185547 13.5322L1.42255 14.9733L14.6807 1.7152L13.2396 0.274102Z" fill="#38BC80"></path>
+            <path d="M14.9996 7.09239H12.9616V2.03804H7.90723V0H14.9996V7.09239Z" fill="#38BC80"></path>
+            </svg>

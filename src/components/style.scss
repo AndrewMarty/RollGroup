@@ -1,0 +1,50 @@
+// Base
+@import "../base/vars";
+@import "../mixins/scss/mixins";
+@import "../base/normalize";
+@import "../base/fonts";
+@import "../base/classes";
+
+// Components
+@import "header/header";
+@import "footer/footer";
+@import "first/first";
+@import "benefits/benefits";
+@import "qwuiz/qwuiz";
+@import "kinds/kinds";
+@import "faq/faq";
+@import "completed/completed";
+@import "information/information";
+@import "price/price";
+@import "guarantee/guarantee";
+@import "help/help";
+@import "complex/complex";
+@import "examples/examples";
+@import "seo/seo";
+@import "solutions/solutions";
+@import "catalog/catalog";
+@import "about/about";
+@import "high/high";
+@import "own/own";
+@import "trust/trust";
+@import "content/content";
+@import "ways/ways";
+@import "scheme/scheme";
+@import "basic/basic";
+@import "development/development";
+@import "types/types";
+@import "control/control";
+@import "additional/additional";
+@import "works/works";
+@import "places/places";
+
+body {
+	color: $main;
+	font-family: "AvenirNextCyr";
+	background-color: $black;
+	overflow-x: hidden;
+}
+body,
+html {
+	height: 100%;
+}

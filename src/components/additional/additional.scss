@@ -1,0 +1,71 @@
+.additional {
+	padding: vw(63) 0 vw(165);
+	background: $white;
+	&__title {
+		font-weight: 700;
+		font-size: vw(30);
+		line-height: vw(60);
+		letter-spacing: 0.02em;
+	}
+	&__inner {
+		display: flex;
+		align-items: center;
+	}
+	&__img {
+		width: vw(40);
+		height: vw(40);
+		margin-right: vw(18);
+	}
+	&__text {
+		font-family: "PorscheNextTT";
+		font-size: vw(18);
+		line-height: vw(40);
+		letter-spacing: 0.02em;
+		margin: 0;
+	}
+	&__list {
+		margin: 0;
+		list-style: square;
+		padding-left: vw(35);
+	}
+	&__li {
+		font-family: "PorscheNextTT";
+		font-size: vw(18);
+		line-height: vw(40);
+		letter-spacing: 0.02em;
+	}
+	&__item {
+		max-width: vw(750);
+		margin-bottom: vw(65);
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+	@media (max-width: $phones) {
+		padding: vw(35, 320) 0 vw(60, 320);
+		&__title {
+			font-size: vw(22, 320);
+			line-height: vw(27, 320);
+		}
+		&__text {
+			font-size: vw(13, 320);
+			line-height: vw(24, 320);
+		}
+		&__item {
+			max-width: none;
+			margin-bottom: vw(40, 320);
+		}
+		&__list {
+			padding-left: vw(18, 320);
+		}
+		&__li {
+			font-size: vw(12, 320);
+			line-height: vw(24, 320);
+		}
+		&__img {
+			width: vw(30, 320);
+			height: vw(30, 320);
+			margin-right: vw(10, 320);
+		}
+	}
+}

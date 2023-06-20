@@ -1,0 +1,121 @@
+.scheme {
+	background: $lgreen;
+	padding: 100px 0 128px;
+	color: $white;
+	&__title {
+		font-weight: 700;
+		font-size: 60px;
+		line-height: 75px;
+		letter-spacing: 0.02em;
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item {
+		display: flex;
+		max-width: 17.791667vw;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		&::after {
+			display: block;
+			right: 0;
+			top: vw(30);
+			position: absolute;
+			content: "";
+			width: vw(75);
+			height: vw(20);
+			background: center/cover url("../img/scheme/arrow.svg");
+			transform: translateX(100%);
+		}
+		&:last-child {
+			&::after {
+				display: none;
+			}
+		}
+	}
+	&__icon {
+		width: vw(82);
+		height: vw(82);
+		margin-bottom: vw(30);
+	}
+	&__inner {
+		display: flex;
+	}
+	&__num {
+		font-weight: 500;
+		font-size: vw(80);
+		line-height: vw(80);
+		letter-spacing: 0.02em;
+		margin-right: vw(5);
+	}
+	&__text {
+		margin: 0;
+		font-weight: 500;
+		font-size: vw(22);
+		line-height: vw(34);
+		letter-spacing: 0.02em;
+		b {
+			font-weight: 600;
+		}
+	}
+	@media (max-width: $phones) {
+		padding: vw(70, 320) 0 vw(115, 320);
+		&__title {
+			font-size: vw(22, 320);
+			line-height: vw(22, 320);
+		}
+		&__item {
+			position: relative;
+			width: 100%;
+			max-width: none;
+			margin-bottom: vw(180, 320);
+			&::after {
+				left: 50%;
+				top: auto;
+				bottom: vw(-80, 320);
+				width: vw(70, 320);
+				height: vw(20, 320);
+				transform: translateX(-50%) rotate(90deg);
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__row {
+			flex-direction: column;
+		}
+		&__icon {
+			width: vw(86, 320);
+			height: vw(86, 320);
+			margin-bottom: vw(15, 320);
+		}
+		&__num {
+			font-size: vw(60, 320);
+			line-height: vw(60, 320);
+			margin-right: vw(5, 320);
+		}
+		&__text {
+			font-size: vw(22, 320);
+			line-height: vw(30, 320);
+		}
+		&__title {
+			font-weight: 500;
+			margin: 0;
+			margin-bottom: vw(90, 320);
+		}
+		&__num {
+			font-weight: 500;
+		}
+		&__text {
+			font-weight: 500;
+			font-size: vw(18, 320);
+			line-height: vw(28, 320);
+		}
+		&__item::after {
+			width: vw(50, 320);
+			height: vw(12, 320);
+		}
+	}
+}

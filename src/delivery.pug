@@ -1,0 +1,23 @@
+extends layouts/main
+block variables
+   - title = 'delivery'
+   - descreption = 'desctiption of delivery'
+block content
+   .wrapper(id="swup" class="transition-fade")
+      include components/header/header
+      main.main
+         section.first.first__delivery
+            .row.first__history
+               ul.first__history-list
+                  li.first__history-item Главная
+                  li.first__history-item Каталог
+                  li.first__history-item Доставка и оплата
+            .container 
+               .first__row.first__delivery-row
+                  .first__item.first__delivery-item 
+                     h1.first__title.first__delivery-title Доставка и оплата
+                     p.first__subtitle.
+                        Рольставни с оперативной доставкой и монтажом на объект
+         include components/additional/additional
+         include components/footer/footer
+append scripts

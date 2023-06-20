@@ -1,0 +1,624 @@
+.first {
+	overflow: hidden;
+	color: $white;
+	min-height: vw(1080);
+	padding-top: vw(112);
+	background: center/cover url("../img/first/background.png");
+	position: relative;
+	&__house {
+		background: center/cover url("../img/first/background_2.png");
+	}
+	&__house-wrap {
+		max-width: vw(600);
+	}
+	&__delivery {
+		background: center/cover url("../img/first/background_3.png");
+		min-height: auto;
+		.first__subtitle {
+			margin-bottom: 0;
+		}
+	}
+	& {
+		.first__delivery-item {
+			max-width: none;
+		}
+		.first__delivery-title {
+			max-width: vw(950);
+			margin-bottom: vw(55);
+		}
+	}
+	&__installation {
+		background: center/cover url("../img/first/background_4.png");
+		min-height: auto;
+		.first__subtitle {
+			margin-bottom: 0;
+		}
+	}
+	&__suptitle {
+		font-family: "PorscheNextTT";
+		font-weight: 400;
+		font-size: vw(24);
+		line-height: vw(40);
+		letter-spacing: 0.04em;
+		display: block;
+		margin-bottom: vw(20);
+	}
+	&__row {
+		display: flex;
+		padding: vw(130) 0 vw(84);
+		align-items: center;
+	}
+	&__item {
+		flex-shrink: 0;
+		position: relative;
+		z-index: 10;
+		max-width: vw(600);
+		margin-right: vw(130);
+	}
+	&__title {
+		font-weight: 700;
+		font-size: vw(90);
+		line-height: vw(90);
+		letter-spacing: 0.02em;
+		margin: 0;
+		margin-bottom: vw(120);
+	}
+	&__subtitle {
+		font-family: "PorscheNextTT";
+		margin: 0;
+		margin-bottom: vw(80);
+		font-size: vw(30);
+		line-height: vw(40);
+		letter-spacing: 0.04em;
+	}
+	&__calc {
+		overflow: hidden;
+		position: relative;
+		font-weight: 700;
+		font-size: vw(20);
+		line-height: vw(50);
+		letter-spacing: 0.02em;
+		background: $lgreen;
+		padding: vw(25) 0;
+		display: block;
+		width: 100%;
+		cursor: pointer;
+		color: $white;
+		border: none;
+		margin-bottom: vw(30);
+		&::after {
+			display: block;
+			position: absolute;
+			content: "";
+			width: vw(52);
+			height: vw(240);
+			transform: rotate(40deg);
+			top: -2.6041666667vw;
+			background-color: #fff;
+			z-index: 1;
+			animation: blick 5s infinite;
+		}
+		img {
+			transition: $normal;
+		}
+		&:hover {
+			img {
+				transform: rotate(45deg);
+			}
+		}
+	}
+	&__calc-text {
+		margin-right: vw(10);
+	}
+	&__info {
+		font-family: "PorscheNextTT";
+		font-size: vw(16);
+		line-height: vw(25);
+		letter-spacing: 0.04em;
+	}
+	&__card {
+		width: vw(400) !important;
+		cursor: pointer;
+		transition: $normal;
+	}
+	&__card-name {
+		font-weight: 450;
+		font-size: vw(16);
+		line-height: vw(20);
+		display: block;
+		margin-bottom: vw(16);
+	}
+	&__text-mob {
+		font-family: "PorscheNextTT";
+		font-size: vw(12);
+		line-height: vw(18);
+		letter-spacing: 0.04em;
+		margin: 0;
+	}
+	&__btn-mob {
+		display: none;
+		color: $white;
+		padding: vw(15) vw(35);
+		font-weight: 700;
+		font-size: vw(12);
+		line-height: vw(17);
+		letter-spacing: 0.02em;
+		background-color: $lgreen;
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin-bottom: vw(20);
+		position: relative;
+		overflow: hidden;
+		&::after {
+			display: block;
+			position: absolute;
+			content: "";
+			width: vw(52);
+			height: vw(240);
+			transform: rotate(40deg);
+			top: -2.6041666667vw;
+			background-color: #fff;
+			z-index: 1;
+			animation: blick 5s infinite;
+		}
+	}
+	&__mob-name {
+		text-align: left;
+	}
+	&__rubles {
+		display: flex;
+		margin-bottom: vw(16);
+	}
+	&__photo {
+		background: linear-gradient(
+			180deg,
+			rgba(28, 26, 26, 0) 37.58%,
+			rgba(28, 26, 26, 0.6) 100%
+		);
+		border-radius: vw(20);
+		overflow: hidden;
+		width: 100%;
+		min-height: vw(495);
+		object-fit: cover;
+		display: block;
+	}
+	&__slider {
+		max-width: vw(400);
+		position: relative;
+	}
+	&__wrapper {
+		align-items: center;
+		overflow: visible;
+	}
+	&__item-mob {
+		display: none;
+	}
+	&__pagination {
+		position: absolute;
+		display: flex;
+		right: vw(140);
+		bottom: vw(96);
+		align-items: center;
+	}
+	&__current,
+	&__max {
+		font-family: "PorscheNextTT";
+		font-size: vw(16);
+		letter-spacing: 0.05em;
+	}
+	&__current {
+		font-weight: 700;
+	}
+	&__line-dots {
+		padding: vw(40) 0;
+		position: absolute;
+		left: vw(-72);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		top: 50%;
+		transform: translateY(-45%);
+		&::after {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-49%);
+			width: vw(1);
+			height: 100%;
+			top: 0;
+			display: block;
+			content: "";
+			background-color: rgba($color: $light, $alpha: 0.1);
+		}
+	}
+	&__dot {
+		width: vw(10);
+		height: vw(10);
+		border-radius: 50%;
+		background: #d9d9d9;
+		opacity: 0.35;
+		margin-bottom: vw(110);
+		transition: 0.3s;
+		transition-property: opacity;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&_active {
+			opacity: 1;
+			font-weight: 700;
+			font-size: vw(12);
+			line-height: vw(25);
+			color: $white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			letter-spacing: 0.04em;
+			width: vw(26);
+			height: vw(26);
+			background: rgba(56, 188, 128, 0.5);
+		}
+	}
+	&__img {
+		width: vw(8);
+		height: vw(8);
+	}
+	&__dots {
+		display: flex;
+		align-items: center;
+		margin: 0 vw(15);
+		.swiper-pagination-bullet {
+			width: vw(25) !important;
+			height: vw(2) !important;
+			border-radius: 0;
+			background-color: rgba($color: $light, $alpha: 1) !important;
+			margin: 0 !important;
+		}
+	}
+	.swiper-slide {
+		transform: scale(0.9);
+	}
+	.swiper-slide-active {
+		transform: scale(1);
+	}
+	&__img {
+		opacity: 0.3;
+		margin-right: vw(2);
+		&:last-child {
+			margin-right: 0;
+		}
+		&_active {
+			opacity: 1;
+		}
+	}
+	&__item-right {
+		overflow: hidden;
+		flex-shrink: 0;
+		width: vw(1200);
+	}
+	&__controls {
+		position: absolute;
+		bottom: vw(-30);
+		right: 0;
+	}
+	&__history {
+		position: absolute;
+		padding-left: vw(63);
+		left: 0;
+		top: vw(188);
+	}
+	&__history-list {
+		margin: 0;
+		display: flex;
+		list-style: none;
+		color: $white;
+		align-items: center;
+		padding: 0;
+	}
+	&__history-item {
+		font-family: "PorscheNextTT";
+		font-size: vw(14);
+		line-height: vw(40);
+		letter-spacing: 0.04em;
+		color: #9c9c9c;
+		&::after {
+			content: "/";
+			margin: 0 vw(10);
+		}
+		&:last-child {
+			color: $white;
+			&::after {
+				display: none;
+			}
+		}
+	}
+	&__house-item {
+		max-width: vw(1110);
+	}
+	&__house-title {
+		margin-bottom: vw(50);
+	}
+	&__house-row {
+		padding: vw(190) 0 vw(127);
+	}
+	&__delivery-row {
+		padding: vw(170) 0 vw(120);
+	}
+	&__calc {
+		img {
+			width: vw(16);
+			height: vw(16);
+		}
+	}
+	&__info-mob {
+		display: none;
+	}
+	// @media (max-width: $large) {
+	// 	&__line-dots {
+	// 		display: none;
+	// 	}
+	// 	&__container {
+	// 		padding: 0 15);
+	// 	}
+	// 	padding-top: 127);
+	// 	min-height: auto;
+	// 	&__item {
+	// 		max-width: 500);
+	// 	}
+	// 	&__calc {
+	// 		font-size: 14);
+	// 		padding: 15);
+	// 	}
+	// }
+	// @media (max-width: $medium) {
+	// 	padding-top: 66);
+	// 	&__item {
+	// 		max-width: 400);
+	// 	}
+	// 	&__title {
+	// 		margin-bottom: 25);
+	// 		font-size: 50);
+	// 		line-height: 55);
+	// 	}
+	// 	&__subtitle {
+	// 		font-size: 18);
+	// 		line-height: 28);
+	// 	}
+	// 	&__calc {
+	// 		font-size: 11);
+	// 		img {
+	// 			width: 12);
+	// 			height: 12);
+	// 		}
+	// 	}
+	// 	&__delivery,
+	// 	&__installation {
+	// 		.first__row {
+	// 			justify-content: flex-start;
+	// 			padding: 40) 0;
+	// 		}
+	// 		.first__title {
+	// 			font-size: 40);
+	// 			line-height: 60);
+	// 			margin-bottom: 10);
+	// 		}
+	// 		.first__subtitle {
+	// 			font-size: 17);
+	// 		}
+	// 	}
+	// }
+	// @media (max-width: $tablets) {
+	// 	padding-top: 56);
+	//
+	// }
+	@media (max-width: $phones) {
+		&__img {
+			width: vw(6, 320);
+			height: vw(6, 320);
+		}
+		&__pagination {
+			right: vw(8, 320);
+			bottom: vw(190, 320);
+		}
+		&__row {
+			padding: vw(15, 320) 0 vw(47, 320);
+			flex-wrap: wrap;
+			flex-direction: column;
+			justify-content: center;
+		}
+		&__item-right {
+			margin-left: vw(10, 320);
+			margin-right: auto;
+			max-width: vw(150, 320);
+			margin-bottom: vw(50, 320);
+		}
+		&__btn-mob {
+			display: flex;
+		}
+		&__info {
+			display: none;
+		}
+		&__item {
+			flex-shrink: 1;
+			margin-right: 0;
+			max-width: none;
+		}
+		&__current,
+		&__max {
+			font-size: vw(7, 320);
+		}
+		&__title {
+			font-size: vw(32, 320);
+			line-height: vw(35, 320);
+		}
+		&__line-dots {
+			display: none;
+		}
+		&__subtitle {
+			font-size: vw(12, 320);
+			line-height: vw(18, 320);
+		}
+		&__calc {
+			display: none;
+		}
+		&__card {
+			width: vw(150, 320);
+		}
+		&__btn-mob {
+			padding: vw(18, 320) vw(40, 320);
+			&::after {
+				height: vw(320, 320);
+				width: vw(15, 320);
+				top: vw(-60, 320);
+			}
+		}
+		&__mob-name {
+			font-size: vw(12, 320);
+			line-height: vw(17, 320);
+		}
+		&__text-mob {
+			font-size: vw(12, 320);
+			line-height: vw(18, 320);
+		}
+		&__container {
+			padding: 0 15px;
+		}
+		&__dots {
+			margin: 0 vw(5, 320);
+			.swiper-pagination-bullet {
+				width: vw(15, 320) !important;
+				height: vw(1, 320) !important;
+			}
+		}
+		&__card-name {
+			display: none;
+		}
+		&__house-wrap {
+			max-width: none;
+		}
+		&__item-mob {
+			display: block;
+		}
+		&__photo {
+			min-height: vw(200, 320);
+		}
+		&__pagination {
+			right: vw(8, 320);
+			bottom: vw(170, 320);
+		}
+		&__suptitle {
+			font-size: vw(14, 320);
+			line-height: vw(20, 320);
+			margin-bottom: vw(10, 320);
+		}
+		&__row {
+			padding-top: vw(30, 320);
+		}
+		&__delivery,
+		&__installation {
+			.first__row {
+				justify-content: flex-start;
+				padding: vw(60, 320) 0 vw(30, 320);
+			}
+			.first__title {
+				max-width: vw(200, 320);
+				font-size: vw(30, 320);
+				line-height: vw(35, 320);
+				margin-bottom: 0;
+			}
+			.first__subtitle {
+				font-size: vw(17, 320);
+			}
+		}
+		&__item {
+			align-self: flex-start;
+		}
+		&__btn-mob {
+			margin-bottom: vw(22, 320);
+		}
+		&__title {
+			max-width: vw(200, 320);
+		}
+		&__subtitle {
+			max-width: vw(250, 320);
+		}
+		&__text-mob {
+			max-width: vw(240, 320);
+		}
+		&__pagination {
+			bottom: vw(215, 320);
+		}
+		&__current,
+		&__max {
+			font-size: vw(10, 320);
+		}
+		.swiper-pagination-bullet {
+			height: vw(1, 320);
+		}
+		&__dots {
+			margin: 0 vw(8, 320);
+		}
+		&__house {
+			margin-bottom: 0;
+		}
+		&__house-row {
+			padding: vw(85, 320) 0 vw(48, 320);
+		}
+		&__house-title {
+			max-width: none;
+			margin-bottom: vw(20, 320);
+		}
+		&__suptitle {
+			font-size: vw(12, 320);
+		}
+		&__info-mob {
+			font-size: vw(12, 320);
+			line-height: vw(18, 320);
+			display: block;
+		}
+		&__history {
+			position: absolute;
+			padding-left: vw(0);
+			left: vw(22, 320);
+			top: vw(58, 320);
+		}
+		&__history-item {
+			font-size: vw(11, 320);
+			&::after {
+				content: "/";
+				margin: 0 vw(10);
+			}
+			&:last-child {
+				color: $white;
+				&::after {
+					display: none;
+				}
+			}
+		}
+		&__slider {
+			max-width: vw(170, 320);
+		}
+		.swiper-slide {
+			width: vw(170, 320) !important;
+		}
+		&__item-right {
+			max-width: none;
+			margin-right: 0;
+			width: 100vw;
+		}
+		&__row {
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+		& {
+			.first__delivery-title {
+				max-width: none;
+				font-size: vw(28, 320);
+			}
+			.first__subtitle {
+				max-width: none;
+			}
+		}
+	}
+}

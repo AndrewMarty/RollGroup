@@ -1,0 +1,40 @@
+.completed {
+	padding-top: vw(120);
+	background-color: $white;
+	position: relative;
+	& .container {
+		position: relative;
+	}
+	&::before {
+		content: "";
+		height: vw(224);
+		position: absolute;
+		display: block;
+		background-color: #f1f5f5;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 0;
+	}
+	&__title {
+		margin-bottom: vw(50);
+	}
+	&__map {
+		width: 100%;
+		display: block;
+		object-fit: cover;
+	}
+	@media (max-width: $phones) {
+		padding-top: vw(25, 320);
+		&__title {
+			font-size: vw(22, 320);
+			line-height: vw(27, 320);
+			margin-bottom: vw(25, 320);
+		}
+		&__map {
+			width: 100vw;
+			position: relative;
+			left: vw(-22, 320);
+		}
+	}
+}

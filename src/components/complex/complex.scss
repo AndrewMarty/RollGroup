@@ -1,0 +1,343 @@
+.complex {
+	padding-top: vw(125);
+	background: $white;
+	overflow: hidden;
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(14, 1fr);
+		grid-column-gap: vw(30);
+	}
+	&__left {
+		position: relative;
+		grid-column: span 5;
+	}
+	&__right {
+		grid-column: 6/15;
+	}
+	&__slider {
+		overflow: hidden;
+		width: vw(1170);
+	}
+	&__wrapper {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		counter-reset: num;
+		list-style: none;
+		overflow: visible;
+	}
+	&__dots {
+		left: auto !important;
+		right: vw(140) !important;
+		width: auto !important;
+		position: absolute;
+		z-index: 100;
+		bottom: vw(50) !important;
+		.swiper-pagination-bullet {
+			width: vw(10);
+			height: vw(10);
+			opacity: 1 !important;
+			background: $lwhite !important;
+			cursor: pointer;
+		}
+		.swiper-pagination-bullet-active {
+			background-color: $lgreen !important;
+		}
+	}
+	&__btn-player {
+		animation: pulse 2s infinite;
+		img {
+			width: vw(15);
+			height: vw(15);
+		}
+	}
+	&__btn-card {
+		img {
+			width: vw(15);
+			height: vw(15);
+		}
+	}
+	&__buttons {
+		display: flex;
+		position: absolute;
+		left: 0;
+		bottom: vw(30);
+		img {
+			width: vw(15);
+			height: vw(15);
+		}
+	}
+	&__button-slider {
+		cursor: pointer;
+		background: $lwhite;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: vw(65);
+		height: vw(65);
+		margin-right: vw(2);
+		transition: $normal;
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover {
+			background: $lgreen;
+		}
+	}
+	&__card {
+		width: vw(480);
+		height: vw(600);
+		position: relative;
+		color: $white;
+		padding: vw(50) vw(59);
+		background: $main;
+		counter-increment: num;
+		&::after {
+			font-weight: 700;
+			font-size: vw(18);
+			line-height: vw(29);
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			content: counter(num);
+			position: absolute;
+			left: vw(54);
+			bottom: vw(65);
+		}
+		&:nth-child(-n + 9)::after {
+			font-family: "PorscheNextTT";
+			content: "0" counter(num);
+		}
+	}
+	&__card-name {
+		font-weight: 700;
+		font-size: vw(25);
+		line-height: vw(40);
+		letter-spacing: 0.07em;
+		margin: 0;
+		margin-bottom: vw(55);
+		text-transform: uppercase;
+	}
+	&__desc {
+		font-family: "PorscheNextTT";
+		font-size: vw(18);
+		line-height: vw(28);
+		letter-spacing: 0.02em;
+		margin: 0;
+		margin-bottom: vw(55);
+		max-width: vw(385);
+	}
+	&__text {
+		display: block;
+		font-size: vw(24);
+		line-height: vw(28);
+		letter-spacing: 0.02em;
+		font-weight: 450;
+		margin-bottom: vw(30);
+	}
+	&__link {
+		font-weight: 450;
+		font-size: vw(24);
+		line-height: vw(28);
+		color: $lgreen;
+	}
+	&__list-item {
+		font-family: "PorscheNextTT";
+		font-size: vw(18);
+		line-height: vw(28);
+	}
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: vw(65);
+		height: vw(65);
+		cursor: pointer;
+		background: $lgreen;
+		border: none;
+	}
+	&__btn-card {
+		position: absolute;
+		right: vw(54);
+		bottom: vw(44);
+	}
+	&__player {
+		display: flex;
+		align-items: center;
+	}
+	&__player-text {
+		margin: 0;
+		max-width: vw(120);
+		font-family: "PorscheNextTT";
+		font-size: vw(14);
+		line-height: vw(19);
+		letter-spacing: 0.02em;
+	}
+	&__btn-player {
+		margin-right: vw(20);
+	}
+	&__list-inner {
+		list-style: square;
+	}
+	&__mobile {
+		display: none;
+	}
+	@media (max-width: $phones) {
+		padding-top: vw(90, 320);
+		&__title {
+			font-size: vw(40, 320);
+			line-height: vw(50, 320);
+		}
+		&__card {
+			padding: vw(35, 320);
+			width: vw(450, 320);
+			height: vw(550, 320);
+			&::after {
+				font-size: vw(16, 320);
+			}
+		}
+		&__card-name {
+			font-size: vw(20, 320);
+			line-height: vw(25, 320);
+			margin-bottom: vw(35, 320);
+		}
+		&__btn-player {
+			width: vw(50, 320);
+			height: vw(50, 320);
+		}
+		&__player-text {
+			font-size: vw(12, 320);
+			line-height: vw(14, 320);
+		}
+		&__desc {
+			font-size: vw(16, 320);
+			line-height: vw(18, 320);
+		}
+		&__list-inner {
+			padding-left: vw(20, 320);
+		}
+		&__list-item {
+			font-size: vw(16, 320);
+			line-height: vw(24, 320);
+		}
+		&__text {
+			font-size: vw(20, 320);
+		}
+		&__link {
+			font-size: vw(22, 320);
+		}
+		&__btn-card {
+			width: vw(55, 320);
+			height: vw(55, 320);
+			img {
+				width: vw(12, 320);
+				height: vw(12, 320);
+			}
+		}
+		padding-top: vw(70, 320);
+		&__title {
+			font-size: vw(32, 320);
+			line-height: vw(40, 320);
+		}
+		&__button-slider {
+			width: vw(50, 320);
+			height: vw(50, 320);
+		}
+		&__card-name {
+			font-size: vw(16, 320);
+			line-height: vw(25, 320);
+			margin-bottom: vw(20, 320);
+		}
+		&__left {
+			grid-column: span 14;
+		}
+		&__buttons {
+			display: none;
+		}
+		&__right {
+			grid-column: span 14;
+		}
+		&__link {
+			font-size: vw(14, 320);
+		}
+		&__text {
+			font-size: vw(14, 320);
+			line-height: vw(17, 320);
+		}
+		&__list-inner {
+			padding-left: vw(10, 320);
+		}
+		&__list-item {
+			font-size: vw(10, 320);
+			line-height: vw(16, 320);
+		}
+		&__card {
+			width: vw(320, 320);
+			height: vw(350, 320);
+			padding: vw(30, 320) vw(25, 320);
+			&::after {
+				left: vw(25, 320);
+				bottom: vw(25, 320);
+			}
+		}
+		&__btn {
+			width: vw(65, 320);
+			height: vw(65, 320);
+			right: 0;
+			bottom: 0;
+		}
+		&__dots {
+			display: none;
+		}
+		&__grid {
+			gap: 0;
+		}
+		&__btn-player {
+			width: vw(45, 320);
+			height: vw(45, 320);
+		}
+		padding-top: vw(15, 320);
+		&__mobile {
+			display: flex;
+			align-items: center;
+			margin-bottom: vw(15, 320);
+		}
+		&__cursor {
+			margin-right: vw(8, 320);
+		}
+		&__mobile-text {
+			font-size: vw(10, 320);
+			line-height: vw(13, 320);
+			letter-spacing: 0.05em;
+			font-weight: 450;
+		}
+		&__slider {
+			position: relative;
+			left: vw(-22, 320);
+			overflow: visible;
+			width: 100vw;
+		}
+		&__desc {
+			max-width: none;
+		}
+		&__title {
+			font-size: vw(22, 320);
+			line-height: vw(27, 320);
+			margin-bottom: vw(20, 320);
+		}
+		&__btn-player {
+			img {
+				width: vw(10, 320);
+				height: vw(10, 320);
+			}
+		}
+		&__player-text {
+			max-width: vw(200, 320);
+		}
+		&__btn-card {
+			img {
+				width: vw(12, 320);
+				height: vw(12, 320);
+			}
+		}
+	}
+}

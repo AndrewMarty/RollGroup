@@ -1,0 +1,278 @@
+.control {
+	background: $white;
+	overflow: hidden;
+	position: relative;
+	&__title {
+		font-weight: 450;
+		font-size: vw(48);
+		line-height: vw(60);
+		letter-spacing: 0.02em;
+		margin: 0;
+		margin-bottom: vw(34);
+	}
+	&__list {
+		padding-left: vw(25);
+		margin: 0;
+		margin-bottom: vw(30);
+	}
+	&__li {
+		font-family: "PorscheNextTT";
+		font-size: vw(17);
+		line-height: vw(40);
+		letter-spacing: 0.02em;
+	}
+	&__row {
+		display: flex;
+	}
+	&__subtitle {
+		font-family: "PorscheNextTT";
+		font-size: vw(17);
+		line-height: vw(30);
+		margin: 0;
+		letter-spacing: 0.02em;
+		margin-bottom: vw(35);
+	}
+	&__green {
+		color: $lgreen;
+		font-weight: 700;
+	}
+	&__pattent {
+		display: inline-block;
+		font-family: "PorscheNextTT";
+		padding: vw(2) vw(24);
+		border-radius: vw(30);
+		color: $white;
+		font-size: vw(16);
+		line-height: vw(39);
+		background: $black;
+		letter-spacing: 0.02em;
+	}
+	&__item {
+		margin-right: vw(100);
+	}
+	&__check {
+		margin: 0;
+		position: relative;
+		font-weight: 450;
+		font-size: vw(30);
+		line-height: vw(40);
+		letter-spacing: 0.02em;
+	}
+	&__img {
+		display: block;
+		width: 57vw;
+		min-height: vw(800);
+		object-fit: cover;
+	}
+	&__photo {
+		position: relative;
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0) 41.88%,
+				rgba(0, 0, 0, 0.5655) 100%
+			);
+		}
+	}
+	&__bottom {
+		padding: vw(50) vw(50) vw(50) vw(73);
+		color: $white;
+		position: absolute;
+		display: flex;
+		justify-content: space-between;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background: $main;
+			opacity: 0.75;
+			display: block;
+			z-index: 0;
+		}
+		display: flex;
+		align-items: center;
+	}
+	&__line {
+		position: relative;
+		width: vw(316);
+		height: vw(1);
+		background: $white;
+		margin: 0 vw(50);
+	}
+	&__text {
+		max-width: vw(100);
+		font-size: vw(16);
+		line-height: vw(27);
+		margin: 0;
+		margin-right: vw(40);
+		text-align: right;
+		letter-spacing: 0.02em;
+	}
+	&__item {
+		flex-shrink: 0;
+		max-width: vw(575);
+		padding: vw(115) 0 vw(90);
+		position: relative;
+		&::after {
+			content: "";
+			display: block;
+			width: 100vw;
+			right: vw(-100);
+			background-color: #f1f5f5;
+			height: vw(90);
+			bottom: vw(0);
+			position: absolute;
+		}
+	}
+	&__controls {
+		position: relative;
+		font-family: "PorscheNextTT";
+		display: flex;
+		align-items: center;
+	}
+	@media (max-width: $phones) {
+		&__title {
+			font-size: vw(30, 320);
+			line-height: vw(44, 320);
+			margin-bottom: vw(15, 320);
+		}
+		&__item {
+			padding: vw(30, 320) 0 vw(25, 320);
+			flex-shrink: 1;
+			&::after {
+				display: none;
+			}
+		}
+		&__play {
+			width: vw(75, 320);
+			height: vw(75, 320);
+		}
+		&__text {
+			margin-right: vw(10, 320);
+		}
+		&__bottom {
+			padding: vw(15, 320) vw(20, 320);
+		}
+		&__line {
+			display: none;
+		}
+		&__text,
+		&__check {
+			max-width: vw(200, 320);
+			font-size: vw(15, 320);
+			line-height: vw(24, 320);
+		}
+		&__img {
+			width: 100%;
+			min-height: auto;
+		}
+		&__item {
+			margin-right: 0;
+		}
+		&__row {
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
+		&__subtitle {
+			font-size: vw(19, 320);
+			line-height: vw(28, 320);
+			margin-bottom: vw(10, 320);
+		}
+		&__pattent {
+			padding: vw(6, 320) vw(14, 320);
+			line-height: vw(16, 320);
+			font-size: vw(11, 320);
+		}
+		&__title {
+			font-size: vw(22, 320);
+			line-height: vw(27, 320);
+			margin-bottom: vw(10, 320);
+		}
+		&__item {
+			max-width: 100%;
+			padding: vw(30, 320) 0 vw(25, 320);
+			flex-shrink: 1;
+			&::after {
+				display: none;
+			}
+		}
+		&__play {
+			width: vw(75, 320);
+			height: vw(75, 320);
+		}
+		&__text {
+			margin-right: vw(10, 320);
+		}
+		&__bottom {
+			padding: vw(15, 320) vw(20, 320);
+		}
+		&__line {
+			display: none;
+		}
+		&__text,
+		&__check {
+			max-width: vw(80, 320);
+			font-size: vw(10, 320);
+			line-height: vw(14, 320);
+		}
+		&__player {
+			position: relative;
+			left: -15px;
+			width: 100vw;
+		}
+		&__video {
+			width: 100%;
+			object-fit: cover;
+			height: vw(350, 320);
+		}
+		&__list {
+			padding-left: vw(15, 320);
+		}
+		&__li {
+			font-size: vw(14, 320);
+			line-height: vw(26, 320);
+		}
+		&__row {
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
+		&__subtitle {
+			font-size: vw(14, 320);
+			line-height: vw(20, 320);
+			margin-bottom: vw(10, 320);
+		}
+		&__item {
+			max-width: none;
+		}
+		&__pattent {
+			padding: vw(6, 320) vw(14, 320);
+			line-height: vw(16, 320);
+			font-size: vw(9, 320);
+		}
+		&__list {
+			padding-left: vw(25, 320);
+			list-style: square;
+		}
+		&__photo {
+			width: 100vw;
+			position: relative;
+			left: vw(-22, 320);
+		}
+		&__item {
+			max-width: 100%;
+		}
+	}
+}
